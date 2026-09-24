@@ -1,0 +1,1142 @@
+<!doctype html>
+<html lang="id">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>PERTAMA – Perumus Tujuan Pembelajaran Madrasah</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Amiri:wght@400;700&family=Literata:opsz,wght@7..72,500;7..72,700&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --zamrud:#0E5A47; --zamrud-2:#16775D; --zamrud-soft:#E3EFE8; --on-zamrud:#FFFFFF;
+  --krem:#F5EEDC; --kertas:#FFFCF4; --tinta:#1D2824; --tinta-2:#50605A; --garis:#DCD2BA;
+  --emas:#9A711C; --emas-soft:#F4E7C6; --kuning-bg:#FFF4CF; --kuning-garis:#D9A92E;
+  --merah:#A8322A; --merah-bg:#FBE4E1; --fokus:#C98F1A; --kepala:#0C4A3B; --kepala-teks:#F5EEDC;
+  --serif:"Literata", Georgia, "Times New Roman", serif;
+  --sans:"Plus Jakarta Sans", "Segoe UI", system-ui, -apple-system, sans-serif;
+  --arab:"Amiri", "Traditional Arabic", "Scheherazade New", serif;
+  box-sizing:border-box;
+  padding-top:env(safe-area-inset-top,0px); padding-bottom:env(safe-area-inset-bottom,0px);
+}
+@media (prefers-color-scheme: dark){
+  :root:not([data-theme="light"]){
+    --zamrud:#62C9A4; --zamrud-2:#86D9BB; --zamrud-soft:#18342A; --on-zamrud:#0A1A14;
+    --krem:#0F1916; --kertas:#15211D; --tinta:#ECE6D6; --tinta-2:#A8B5AE; --garis:#2D3D37;
+    --emas:#D8B25C; --emas-soft:#3A3120; --kuning-bg:#3A3217; --kuning-garis:#C99C2A;
+    --merah:#F19087; --merah-bg:#3D1F1C; --kepala:#0A2E25; --kepala-teks:#ECE6D6;
+  }
+}
+:root[data-theme="dark"]{
+  --zamrud:#62C9A4; --zamrud-2:#86D9BB; --zamrud-soft:#18342A; --on-zamrud:#0A1A14;
+  --krem:#0F1916; --kertas:#15211D; --tinta:#ECE6D6; --tinta-2:#A8B5AE; --garis:#2D3D37;
+  --emas:#D8B25C; --emas-soft:#3A3120; --kuning-bg:#3A3217; --kuning-garis:#C99C2A;
+  --merah:#F19087; --merah-bg:#3D1F1C; --kepala:#0A2E25; --kepala-teks:#ECE6D6;
+}
+*,*::before,*::after{box-sizing:inherit}
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--krem);color:var(--tinta);font-family:var(--sans);font-size:16px;line-height:1.55;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:var(--serif);font-weight:700;line-height:1.2;margin:0}
+button,input,select,textarea{font:inherit;color:inherit}
+:focus-visible{outline:3px solid var(--fokus);outline-offset:2px}
+img{max-width:100%}
+.wrap{max-width:1120px;margin:0 auto;padding:0 1rem}
+
+/* Kepala */
+.kepala{background:var(--kepala);color:var(--kepala-teks)}
+.kepala-isi{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1.1rem 1rem;flex-wrap:wrap}
+.merek{display:flex;align-items:center;gap:.85rem}
+.merek svg{width:46px;height:46px;color:#D9B764;flex:none}
+.merek h1{font-size:1.65rem;letter-spacing:.06em}
+.merek p{margin:.1rem 0 0;font-size:.92rem;opacity:.85}
+.kepala-aksi{display:flex;gap:.5rem;flex-wrap:wrap}
+.btn-kepala{background:transparent;border:1px solid rgba(245,238,220,.45);color:var(--kepala-teks);padding:.5rem .9rem;border-radius:8px;cursor:pointer;font-weight:600;font-size:.9rem}
+.btn-kepala:hover{background:rgba(245,238,220,.1)}
+.pita{height:14px;background-color:var(--kepala);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='28' height='14' viewBox='0 0 28 14'%3E%3Cg fill='none' stroke='%23C9A24D' stroke-width='1'%3E%3Crect x='9' y='2' width='10' height='10'/%3E%3Crect x='9' y='2' width='10' height='10' transform='rotate(45 14 7)'/%3E%3Cpath d='M0 7h4M24 7h4'/%3E%3C/g%3E%3C/svg%3E");border-bottom:3px solid #C9A24D}
+
+/* Langkah */
+.langkah-utama{display:flex;gap:.4rem;list-style:none;margin:1.4rem 0 1.2rem;padding:0;flex-wrap:wrap}
+.langkah-utama li{display:flex;align-items:center;gap:.5rem;color:var(--tinta-2);font-size:.92rem;font-weight:600}
+.langkah-utama li+li::before{content:"";width:28px;height:1px;background:var(--garis);margin-right:.2rem}
+.langkah-utama .no{width:26px;height:26px;border-radius:50%;display:grid;place-items:center;border:1.5px solid var(--garis);font-size:.82rem}
+.langkah-utama .kini{color:var(--zamrud)}
+.langkah-utama .kini .no{background:var(--zamrud);border-color:var(--zamrud);color:var(--on-zamrud)}
+.langkah-utama .lewat .no{border-color:var(--zamrud);color:var(--zamrud)}
+
+/* Kartu dasar */
+.lembar{background:var(--kertas);border:1px solid var(--garis);border-radius:14px;padding:1.4rem}
+@media (min-width:720px){.lembar{padding:1.8rem 2rem}}
+.lembar h2{font-size:1.35rem;color:var(--zamrud)}
+.pengantar{color:var(--tinta-2);margin:.4rem 0 1.4rem;max-width:68ch}
+
+/* Form */
+.grid-form{display:grid;grid-template-columns:1fr;gap:1rem 1.2rem}
+@media (min-width:720px){.grid-form{grid-template-columns:1fr 1fr}.penuh{grid-column:1/-1}}
+.fld label{display:block;font-weight:600;font-size:.93rem;margin-bottom:.3rem}
+.wajib{font-weight:500;font-size:.75rem;color:var(--merah);background:var(--merah-bg);padding:.05rem .4rem;border-radius:4px;margin-left:.3rem}
+.fld input,.fld select,.fld textarea{width:100%;padding:.6rem .75rem;border:1.5px solid var(--garis);border-radius:9px;background:var(--krem);color:var(--tinta)}
+.fld textarea{min-height:110px;resize:vertical}
+.fld input:focus,.fld select:focus,.fld textarea:focus{border-color:var(--zamrud);outline:none;box-shadow:0 0 0 3px color-mix(in srgb,var(--zamrud) 22%,transparent)}
+.dua{display:grid;grid-template-columns:1fr 1fr;gap:.7rem}
+.bantu{margin:.3rem 0 0;font-size:.82rem;color:var(--tinta-2)}
+.galat input,.galat textarea{border-color:var(--merah)}
+.pesan-galat{margin:.3rem 0 0;color:var(--merah);font-size:.85rem;font-weight:600}
+.ringkas-galat{background:var(--merah-bg);color:var(--merah);border-radius:9px;padding:.7rem 1rem;margin-bottom:1rem;font-weight:600}
+.aksi-form{display:flex;justify-content:space-between;gap:.7rem;margin-top:1.5rem;flex-wrap:wrap}
+
+.btn{display:inline-flex;align-items:center;gap:.45rem;border-radius:9px;padding:.65rem 1.1rem;font-weight:600;cursor:pointer;border:1.5px solid var(--zamrud);background:transparent;color:var(--zamrud);font-size:.93rem}
+.btn:hover{background:var(--zamrud-soft)}
+.btn-utama{background:var(--zamrud);color:var(--on-zamrud)}
+.btn-utama:hover{background:var(--zamrud-2)}
+.btn-kecil{padding:.4rem .75rem;font-size:.84rem;border-width:1px}
+.btn[disabled]{opacity:.55;cursor:progress}
+.btn svg{width:16px;height:16px}
+
+/* Proses */
+.proses{max-width:640px;margin:0 auto}
+.daftar-proses{list-style:none;padding:0;margin:1.4rem 0}
+.daftar-proses li{display:flex;align-items:center;gap:.8rem;padding:.65rem 0;border-bottom:1px dashed var(--garis);color:var(--tinta-2)}
+.daftar-proses .ikon{width:28px;height:28px;border-radius:50%;border:1.5px solid var(--garis);display:grid;place-items:center;flex:none;font-size:.8rem;font-weight:700}
+.daftar-proses .selesai{color:var(--tinta)}
+.daftar-proses .selesai .ikon{background:var(--zamrud);border-color:var(--zamrud);color:var(--on-zamrud)}
+.daftar-proses .aktif{color:var(--zamrud);font-weight:600}
+.daftar-proses .aktif .ikon{border-color:var(--zamrud);border-top-color:transparent;animation:putar 1s linear infinite}
+@keyframes putar{to{transform:rotate(360deg)}}
+@media (prefers-reduced-motion:reduce){.daftar-proses .aktif .ikon{animation:none;border-top-color:var(--zamrud)}}
+.waktu{color:var(--tinta-2);font-size:.9rem}
+.kotak-galat{background:var(--merah-bg);border-left:4px solid var(--merah);border-radius:9px;padding:1rem 1.1rem;margin:1rem 0}
+.kotak-galat strong{color:var(--merah)}
+
+/* Hasil */
+.identitas{display:flex;flex-wrap:wrap;gap:.4rem 1.4rem;font-size:.9rem;color:var(--tinta-2);margin:.5rem 0 1rem}
+.identitas b{color:var(--tinta);font-weight:600}
+.bar-aksi{display:flex;gap:.5rem;flex-wrap:wrap;margin-bottom:1rem}
+.validasi{border:1px solid var(--kuning-garis);background:var(--kuning-bg);border-radius:10px;padding:.8rem 1rem;margin-bottom:1rem;font-size:.9rem}
+.validasi summary{cursor:pointer;font-weight:700}
+.validasi ul{margin:.5rem 0 0;padding-left:1.2rem}
+.validasi li{margin:.2rem 0}
+.validasi.bersih{border-color:var(--zamrud);background:var(--zamrud-soft)}
+.tabs{display:flex;gap:.2rem;overflow-x:auto;border-bottom:1.5px solid var(--garis);margin-bottom:1.2rem;scrollbar-width:thin}
+.tab{flex:none;background:none;border:0;border-bottom:3px solid transparent;margin-bottom:-1.5px;padding:.6rem .85rem;cursor:pointer;color:var(--tinta-2);font-weight:600;font-size:.9rem;display:flex;gap:.45rem;align-items:baseline}
+.tab .huruf{font-family:var(--serif);font-size:1rem;color:var(--emas)}
+.tab[aria-selected="true"]{color:var(--zamrud);border-bottom-color:var(--zamrud)}
+.bagian-kepala{display:flex;justify-content:space-between;align-items:center;gap:.8rem;flex-wrap:wrap}
+.bagian-kepala h2{font-size:1.3rem}
+.bagian-kepala .aksi{display:flex;gap:.4rem;flex-wrap:wrap}
+.petunjuk{font-size:.84rem;color:var(--tinta-2);margin:.35rem 0 1rem}
+.tabel-wrap{overflow-x:auto;border:1px solid var(--garis);border-radius:10px;background:var(--kertas)}
+table{border-collapse:collapse;width:100%;min-width:760px;font-size:.9rem}
+th,td{border-bottom:1px solid var(--garis);border-right:1px solid var(--garis);padding:.6rem .7rem;text-align:left;vertical-align:top}
+th:last-child,td:last-child{border-right:0}
+tbody tr:last-child td{border-bottom:0}
+th{background:var(--zamrud-soft);color:var(--zamrud);font-weight:700;font-size:.84rem;white-space:nowrap}
+[contenteditable="true"]{white-space:pre-wrap;cursor:text;border-radius:4px}
+[contenteditable="true"]:hover{background:color-mix(in srgb,var(--emas-soft) 55%,transparent)}
+[contenteditable="true"]:focus{outline:2px solid var(--fokus);outline-offset:-2px;background:var(--kertas)}
+.blok{margin-top:1rem;background:var(--kertas);border:1px solid var(--garis);border-radius:10px;padding:.9rem 1rem}
+.blok h3{font-family:var(--sans);font-size:.88rem;color:var(--tinta-2);font-weight:700;margin-bottom:.3rem}
+.blok div[contenteditable]{min-height:1.5em;padding:.15rem .25rem}
+tr.ada-masalah td:first-child{box-shadow:inset 4px 0 0 var(--kuning-garis)}
+.catatan-kecil{display:block;font-size:.78rem;color:var(--emas);margin-top:.3rem;font-weight:600}
+
+/* Lencana */
+.lencana{display:inline-block;padding:.12rem .5rem;border-radius:99px;font-size:.76rem;font-weight:700;white-space:nowrap}
+.pilih{border-radius:99px;padding:.2rem .45rem;font-size:.8rem;font-weight:700;border:1px solid transparent;cursor:pointer}
+.b-C1{background:#EFE6CF;color:#6B5316}.b-C2{background:#DDEFD9;color:#2F6326}.b-C3{background:#CDEBE2;color:#11574A}
+.b-C4{background:#CFE3F2;color:#1D4E73}.b-C5{background:#F6DDC4;color:#7A3F0F}.b-C6{background:#E8D6EE;color:#5B2A6E}
+.s-uni{background:#E9E6DD;color:#4A463B}.s-multi{background:#D8ECF0;color:#1E5561}.s-rel{background:#D3EBDA;color:#1D5C33}.s-ext{background:#F2DCE3;color:#76233F}.s-pre{background:var(--merah-bg);color:var(--merah)}
+.g-chip{font-size:.75rem;font-weight:600;color:var(--emas);border:1px solid var(--emas);border-radius:99px;padding:.08rem .5rem}
+
+/* Diagram submateri */
+.tangga{list-style:none;margin:0;padding:0}
+.tangga li{position:relative;margin-left:0;max-width:720px}
+@media (min-width:760px){.tangga li{margin-left:calc(var(--i) * 1.6rem)}}
+.kartu-sub{background:var(--kertas);border:1px solid var(--garis);border-left:4px solid var(--zamrud);border-radius:10px;padding:.8rem 1rem}
+.kartu-sub .atas{display:flex;align-items:center;gap:.6rem;margin-bottom:.35rem}
+.kartu-sub .urut{font-family:var(--serif);font-weight:700;color:var(--zamrud);font-size:1.15rem}
+.kartu-sub .judul{font-weight:700}
+.kartu-sub .desk{color:var(--tinta-2);font-size:.9rem}
+.panah{display:block;width:22px;height:26px;margin:.15rem 0 .15rem 1.2rem;color:var(--emas)}
+
+/* TP */
+.jp-ringkas{display:flex;justify-content:space-between;align-items:center;gap:1rem;flex-wrap:wrap;background:var(--zamrud-soft);border-radius:10px;padding:.75rem 1rem;margin-bottom:1rem;font-size:.93rem}
+.jp-ringkas.lebih{background:var(--kuning-bg);border:1px solid var(--kuning-garis)}
+.jp-ringkas b{font-size:1.05rem}
+.daftar-tp{list-style:none;margin:0;padding:0;display:grid;gap:.8rem}
+.kartu-tp{background:var(--kertas);border:1px solid var(--garis);border-radius:12px;padding:1rem 1.1rem}
+.kartu-tp.ada-masalah{border-color:var(--kuning-garis);box-shadow:inset 4px 0 0 var(--kuning-garis)}
+.kartu-tp .meta{display:flex;flex-wrap:wrap;gap:.4rem;align-items:center;margin-bottom:.5rem}
+.kartu-tp .kode{font-family:var(--serif);font-weight:700;color:var(--zamrud);font-size:1.05rem;margin-right:.3rem}
+.kartu-tp .rumusan{font-size:1.02rem;line-height:1.6;padding:.1rem .2rem}
+.kartu-tp .bawah{display:grid;grid-template-columns:1fr auto;gap:.8rem;margin-top:.6rem;font-size:.88rem;color:var(--tinta-2)}
+.kartu-tp .bawah span[contenteditable]{color:var(--tinta)}
+.jp-edit{display:inline-block;min-width:2ch;font-weight:700;color:var(--tinta)}
+.masalah{margin-top:.5rem;font-size:.84rem;color:var(--emas);font-weight:600}
+
+/* KBC */
+.grid-kartu{display:grid;gap:.9rem}
+@media (min-width:760px){.grid-kartu{grid-template-columns:1fr 1fr}}
+.kartu{background:var(--kertas);border:1px solid var(--garis);border-radius:12px;padding:1rem 1.1rem}
+.kartu h3{font-size:1.05rem;color:var(--zamrud);margin-bottom:.2rem}
+.kartu .sub{font-size:.85rem;color:var(--tinta-2);margin-bottom:.7rem}
+.ikon-cinta{display:flex;gap:.35rem;margin-bottom:.7rem;flex-wrap:wrap}
+.ikon-cinta span{display:inline-flex;align-items:center;gap:.3rem;border-radius:99px;padding:.2rem .55rem .2rem .35rem;font-size:.76rem;font-weight:600;border:1px solid var(--garis);color:var(--tinta-2);opacity:.45}
+.ikon-cinta span.pakai{opacity:1;border-color:var(--zamrud);color:var(--zamrud);background:var(--zamrud-soft)}
+.ikon-cinta svg{width:18px;height:18px}
+.baris{font-size:.9rem;margin:.45rem 0}
+.baris .lbl{display:block;font-size:.78rem;font-weight:700;color:var(--tinta-2)}
+
+/* Keislaman */
+.spanduk{display:flex;gap:.8rem;align-items:flex-start;background:var(--kuning-bg);border:1px solid var(--kuning-garis);border-radius:10px;padding:.85rem 1rem;margin-bottom:1rem;font-weight:600;font-size:.93rem}
+.spanduk svg{width:22px;height:22px;flex:none;color:var(--emas)}
+.spanduk a{color:var(--zamrud)}
+.arab{font-family:var(--arab);font-size:1.6rem;line-height:2.1;text-align:right;direction:rtl;padding:.4rem .3rem;margin:.5rem 0;border-top:1px dashed var(--garis);border-bottom:1px dashed var(--garis)}
+.arab-kosong{font-size:.85rem;color:var(--tinta-2);font-style:italic;margin:.5rem 0}
+.yakin-rendah{background:var(--merah);color:#fff}
+.yakin-sedang{background:var(--emas-soft);color:var(--emas)}
+.yakin-tinggi{background:var(--zamrud-soft);color:var(--zamrud)}
+.kartu.rendah{border-color:var(--merah);box-shadow:inset 4px 0 0 var(--merah)}
+.jenis-int{background:var(--zamrud-soft);color:var(--zamrud)}
+
+/* Riwayat */
+.laci-latar{position:fixed;inset:0;background:rgba(10,20,16,.45);z-index:20}
+.laci{position:fixed;top:0;right:0;bottom:0;width:min(420px,100%);background:var(--kertas);z-index:21;display:flex;flex-direction:column;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);border-left:1px solid var(--garis)}
+.laci header{display:flex;justify-content:space-between;align-items:center;padding:1rem 1.1rem;border-bottom:1px solid var(--garis)}
+.laci header h2{font-size:1.2rem;color:var(--zamrud)}
+.laci ul{list-style:none;margin:0;padding:.5rem 1.1rem;overflow-y:auto;flex:1}
+.laci li{padding:.8rem 0;border-bottom:1px solid var(--garis)}
+.laci .j{font-weight:700}
+.laci .k{font-size:.84rem;color:var(--tinta-2);margin:.1rem 0 .5rem}
+.laci .tombol{display:flex;gap:.4rem}
+.kosong{color:var(--tinta-2);padding:1rem 0}
+
+.toast{position:fixed;left:50%;transform:translateX(-50%);bottom:calc(1.2rem + env(safe-area-inset-bottom,0px));background:var(--tinta);color:var(--krem);padding:.7rem 1.1rem;border-radius:10px;font-size:.9rem;z-index:30;max-width:calc(100% - 2rem);box-shadow:0 6px 24px rgba(0,0,0,.2)}
+.kaki{font-size:.82rem;color:var(--tinta-2);padding:2rem 1rem 2.5rem;max-width:1120px;margin:0 auto}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0)}
+.memuat{opacity:.55;pointer-events:none}
+</style>
+</head>
+<body>
+<div id="app"></div>
+<div id="toast" class="toast" role="status" aria-live="polite" hidden></div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.8.2/jspdf.plugin.autotable.min.js"></script>
+<script>
+"use strict";
+/* ============ Konstanta ============ */
+const KUNCI_RIWAYAT = "pertama.riwayat.v1";
+const KUNCI_DRAF = "pertama.draf.v1";
+
+const SYSTEM = `Anda adalah pakar kurikulum madrasah, evaluator pendidikan, dan penulis artikel ilmiah. Tugas Anda menganalisis CP dan merumuskan TP dengan aturan berikut.
+
+A. ANALISIS CP
+Uraikan CP menjadi: (1) kompetensi utama, (2) pengetahuan yang harus dikuasai, (3) keterampilan yang harus ditunjukkan, (4) konteks penerapan, (5) tingkat kompleksitas kompetensi, (6) potensi penguatan karakter. Sajikan dalam tabel dengan kolom: CP | Kompetensi | Pengetahuan | Keterampilan | Kompleksitas.
+
+B. ANALISIS MATERI
+Pecah materi menjadi submateri/kompetensi yang logis dengan urutan: konsep dasar → keterkaitan konsep → penerapan → penalaran → pemecahan masalah → kreasi/komunikasi, sesuai karakter materi. Jangan memaksakan semua tahap jika tidak diperlukan; jelaskan alasan jika ada tahap yang tidak digunakan.
+
+C. TAKSONOMI BLOOM REVISI
+Gunakan sebagai dasar proses kognitif dengan KKO berikut:
+C1 Mengingat: menyebutkan, mengidentifikasi, mendata, memilih, mengenali, mengingat kembali.
+C2 Memahami: menjelaskan, menguraikan, menginterpretasikan, mengklasifikasikan, memberikan contoh, membandingkan, menyimpulkan.
+C3 Menerapkan: menghitung, menentukan, menggunakan, menerapkan, menyelesaikan, menunjukkan, mendemonstrasikan.
+C4 Menganalisis: menganalisis, membedakan, menghubungkan, mengorganisasikan, menemukan pola, menguraikan hubungan, memeriksa.
+C5 Mengevaluasi: menilai, mengevaluasi, memeriksa, mengkritisi, membuktikan, memberikan alasan, mempertimbangkan.
+C6 Mencipta: merancang, membuat, menyusun, mengembangkan, menghasilkan, memodelkan, menciptakan strategi/solusi.
+Jangan menggunakan C1–C6 secara otomatis. Pilih level berdasarkan tuntutan CP, karakteristik materi, fase/kelas, dan kedalaman kompetensi. Untuk Matematika MTs, prioritaskan C2–C4; gunakan C5–C6 hanya jika sesuai karakter materi dan tuntutan CP. Berikan alasan pemilihan level.
+
+D. TAKSONOMI SOLO
+Gunakan untuk menentukan kedalaman struktur pemahaman:
+Prestructural: hanya informasi diagnostik, JANGAN dijadikan TP.
+Unistructural: satu aspek (mengidentifikasi, menyebutkan, menentukan, menggunakan satu prosedur, menunjukkan).
+Multistructural: beberapa aspek belum terhubung (menjelaskan beberapa konsep, menggunakan beberapa prosedur, mengklasifikasikan, menyelesaikan beberapa langkah, membandingkan beberapa karakteristik).
+Relational: menghubungkan konsep menjadi utuh (menghubungkan, menganalisis, mengintegrasikan, menjelaskan hubungan, menerapkan konsep dalam konteks, memecahkan masalah, menyimpulkan berdasarkan hubungan antarkonsep).
+Extended Abstract: transfer dan generalisasi (mengevaluasi, menggeneralisasi, merancang, mengembangkan, memodelkan, menciptakan, menyusun strategi, mentransfer konsep ke situasi baru).
+
+E. HUBUNGAN BLOOM DAN SOLO
+Acuan umum (bukan aturan mutlak): C1–Unistructural; C2–Unistructural/Multistructural; C3–Multistructural/Relational; C4–Relational; C5–Relational/Extended Abstract; C6–Extended Abstract. Bloom menentukan proses berpikir, SOLO menentukan kedalaman struktur pemahaman. Jika TP ber-level C3 tetapi menuntut penghubungan beberapa konsep, tetapkan SOLO Relational dan jelaskan alasannya.
+
+F. GRADASI TP
+Susun bertahap: TP awal → TP pengembangan → TP penerapan → TP penalaran/pemecahan masalah → TP pengembangan/transfer. Jumlah TP disesuaikan dengan bobot materi, jumlah submateri, alokasi waktu, dan CP. Jangan membuat TP berlebihan. Setiap TP memiliki satu kompetensi utama, kondisi/konteks, tingkat kemampuan yang jelas, dan bukti ketercapaian yang terukur.
+
+G. FORMAT RUMUSAN TP
+Pola: Peserta didik mampu + KKO + kompetensi/materi + konteks/kondisi + kriteria keberhasilan (jika perlu). Hindari lebih dari satu atau dua KKO dalam satu TP.
+
+H. INTEGRASI KBC
+Setelah TP kognitif selesai, integrasikan Panca Cinta secara proporsional: Cinta Allah dan Rasul-Nya, Cinta Ilmu, Cinta Diri dan Sesama, Cinta Lingkungan, Cinta Tanah Air. Pilih hanya nilai yang relevan; jangan memaksakan semuanya ke setiap TP. Rumusan harus memuat perilaku yang dapat diamati, sikap yang dikembangkan, keterampilan sosial, dan penerapan dalam kehidupan. Hindari rumusan tidak terukur seperti 'Peserta didik mampu mencintai Allah'.
+
+I. INTEGRASI AL-QUR'AN / HADIS / KITAB KUNING
+Cari sumber yang relevan dengan konsep, nilai, konteks, karakter, atau penerapan materi. Klasifikasikan setiap sumber sebagai 'Integrasi konseptual' (hubungan langsung dengan gagasan keilmuan) atau 'Integrasi nilai' (mendukung nilai/karakter). Jangan mengklaim ayat sebagai 'ayat matematika' jika hanya berkaitan nilai.
+ATURAN KEJUJURAN MUTLAK: Jangan mengarang teks Arab, nomor ayat, terjemahan, hadis, perawi, atau kutipan kitab. Jika tidak yakin pada teks Arab persis, kosongkan field teks Arab dan cukup cantumkan rujukan (nama surah dan nomor ayat) beserta ringkasan makna. Beri tingkat keyakinan (tinggi/sedang/rendah) pada setiap sumber. Jika tidak ditemukan sumber yang benar-benar relevan, nyatakan dengan jujur.
+
+Kembalikan jawaban HANYA dalam format JSON sesuai skema.`;
+
+const ATURAN_UMUM = `Ketentuan keluaran: gunakan Bahasa Indonesia baku; jangan gunakan Markdown di dalam nilai string; kembalikan HANYA satu objek JSON yang valid tanpa teks pembuka atau penutup.`;
+
+const SKEMA_INTI = `{
+  "analisisCP": { "tabel": [{ "cp": "", "kompetensi": "", "pengetahuan": "", "keterampilan": "", "kompleksitas": "" }], "konteksPenerapan": "", "potensiKarakter": "" },
+  "analisisMateri": [{ "urutan": 1, "tahap": "konsep dasar|keterkaitan konsep|penerapan|penalaran|pemecahan masalah|kreasi/komunikasi", "submateri": "", "deskripsi": "" }],
+  "catatanTahapTidakDigunakan": "",
+  "pemilihanLevelKognitif": { "rentangBloom": "", "alasan": "" },
+  "tujuanPembelajaran": [{ "kode": "TP-1", "gradasi": "awal|pengembangan|penerapan|penalaran/pemecahan masalah|pengembangan/transfer", "rumusan": "", "kko": "", "levelBloom": "C1-C6", "levelSOLO": "Unistructural|Multistructural|Relational|Extended Abstract", "alasanLevel": "", "buktiKetercapaian": "" }]
+}`;
+const SKEMA_ATP = `{ "alurTP": [{ "urutan": 1, "kodeTP": "TP-1", "materiPokok": "", "alokasiJP": 0, "pertemuanKe": "" }], "rasionalAlur": "" }`;
+const SKEMA_KBC = `{ "integrasiKBC": [{ "kodeTP": "", "nilaiPancaCinta": [""], "rumusan": "", "perilakuTeramati": "", "penerapanKehidupan": "" }] }`;
+const SKEMA_ISLAM = `{ "integrasiKeislaman": [{ "jenisSumber": "Al-Qur'an|Hadis|Kitab Kuning", "rujukan": "", "teksArab": "", "terjemahanAtauMakna": "", "jenisIntegrasi": "konseptual|nilai", "keterkaitan": "", "tingkatKeyakinan": "tinggi|sedang|rendah" }], "catatanKejujuranSumber": "" }`;
+
+const LANGKAH = ["Menganalisis CP","Menganalisis materi","Menentukan level kognitif","Merumuskan TP","Menyusun alur TP (ATP)","Mengintegrasikan KBC","Menelusuri sumber keislaman"];
+const TABS = [
+  {k:"A", huruf:"A", label:"Analisis CP"},
+  {k:"B", huruf:"B", label:"Analisis materi"},
+  {k:"CE", huruf:"C–E", label:"Bloom dan SOLO"},
+  {k:"FG", huruf:"F–G", label:"Tujuan pembelajaran"},
+  {k:"ATP", huruf:"", label:"Alur TP (ATP)"},
+  {k:"H", huruf:"H", label:"Integrasi KBC"},
+  {k:"I", huruf:"I", label:"Sumber keislaman"},
+  {k:"R", huruf:"", label:"Rekap TP"}
+];
+const BLOOM = ["C1","C2","C3","C4","C5","C6"];
+const NAMA_BLOOM = {C1:"Mengingat",C2:"Memahami",C3:"Menerapkan",C4:"Menganalisis",C5:"Mengevaluasi",C6:"Mencipta"};
+const SOLO = ["Unistructural","Multistructural","Relational","Extended Abstract"];
+const SLUG_SOLO = {"Unistructural":"uni","Multistructural":"multi","Relational":"rel","Extended Abstract":"ext","Prestructural":"pre"};
+const ACUAN = {C1:["Unistructural"],C2:["Unistructural","Multistructural"],C3:["Multistructural","Relational"],C4:["Relational"],C5:["Relational","Extended Abstract"],C6:["Extended Abstract"]};
+const KKO = ["menyebutkan","mengidentifikasi","mendata","memilih","mengenali","mengingat kembali","menjelaskan","menguraikan","menginterpretasikan","mengklasifikasikan","memberikan contoh","membandingkan","menyimpulkan","menghitung","menentukan","menggunakan","menerapkan","menyelesaikan","menunjukkan","mendemonstrasikan","menganalisis","membedakan","menghubungkan","mengorganisasikan","menemukan pola","memeriksa","menilai","mengevaluasi","mengkritisi","membuktikan","memberikan alasan","mempertimbangkan","merancang","membuat","menyusun","mengembangkan","menghasilkan","memodelkan","menciptakan","memecahkan","menggeneralisasi","mengintegrasikan"];
+const KATA_TAK_TERUKUR = ["mencintai","memahami nilai","menghayati"];
+const PANCA = [
+  {k:"allah", nama:"Cinta Allah dan Rasul-Nya", re:/allah|rasul/i, svg:'<path d="M5 21V11a7 7 0 0 1 14 0v10M9 21v-5a3 3 0 0 1 6 0v5M3 21h18"/>'},
+  {k:"ilmu", nama:"Cinta Ilmu", re:/ilmu/i, svg:'<path d="M3 5h6a3 3 0 0 1 3 3v12a2 2 0 0 0-2-2H3zM21 5h-6a3 3 0 0 0-3 3v12a2 2 0 0 1 2-2h7z"/>'},
+  {k:"sesama", nama:"Cinta Diri dan Sesama", re:/diri|sesama/i, svg:'<circle cx="8" cy="8" r="3"/><circle cx="16.5" cy="9" r="2.5"/><path d="M2 20a6 6 0 0 1 12 0M13.5 20a5 5 0 0 1 8.5-3.5"/>'},
+  {k:"lingkungan", nama:"Cinta Lingkungan", re:/lingkungan|alam/i, svg:'<path d="M5 19C5 10 11 4 20 4c0 9-6 15-15 15zM5 19l8-8"/>'},
+  {k:"tanahair", nama:"Cinta Tanah Air", re:/tanah\s*air|bangsa|negara/i, svg:'<path d="M5 21V4M5 4h12l-2.5 4L17 12H5"/>'}
+];
+const CONTOH = {
+  madrasah:"MTs Negeri Contoh", jenjang:"MTs", mapel:"Matematika", fase:"D", kelas:"VII", semester:"Genap",
+  elemen:"Bilangan",
+  cp:"Di akhir fase D, peserta didik dapat menggunakan pengertian rasio (skala, proporsi, dan laju perubahan) dalam penyelesaian masalah.",
+  materi:"Perbandingan senilai dan perbandingan berbalik nilai",
+  jp:"10", pertemuan:"4",
+  catatan:"Sebagian peserta didik tinggal di lingkungan pasar dan pesisir; banyak orang tua berdagang. Kemampuan awal operasi pecahan dan rasio masih beragam."
+};
+const IKON = {
+  bintang:'<svg viewBox="0 0 48 48" aria-hidden="true"><g fill="none" stroke="currentColor" stroke-width="2"><rect x="11" y="11" width="26" height="26"/><rect x="11" y="11" width="26" height="26" transform="rotate(45 24 24)"/><circle cx="24" cy="24" r="6.5"/></g></svg>',
+  salin:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h8"/></svg>',
+  ulang:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M20 11a8 8 0 1 0-2.3 5.7M20 4v7h-7"/></svg>',
+  unduh:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3v12m-5-5 5 5 5-5M4 20h16"/></svg>',
+  awas:'<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M12 3 2 20h20L12 3zM12 10v4m0 3v.01"/></svg>',
+  panah:'<svg class="panah" viewBox="0 0 22 26" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M11 1v22M4 16l7 7 7-7"/></svg>'
+};
+
+/* ============ Status ============ */
+function kosong(){ return {madrasah:"",jenjang:"MTs",mapel:"",fase:"D",kelas:"VII",semester:"Ganjil",elemen:"",cp:"",materi:"",jp:"",pertemuan:"",catatan:""}; }
+const S = { view:"form", input: muatDraf() || kosong(), hasil:null, id:null, tab:"A", stage:0, error:null, resumeFrom:0, formErr:{}, regen:{}, ctl:null, t0:0, laci:false };
+let pewaktu = null;
+
+/* ============ Utilitas ============ */
+const $ = (s, r=document) => r.querySelector(s);
+const esc = s => String(s ?? "").replace(/[&<>"']/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const arr = x => Array.isArray(x) ? x : [];
+const str = x => x == null ? "" : (typeof x === "string" ? x : Array.isArray(x) ? x.join(", ") : String(x));
+
+function muatDraf(){ try{ const v = localStorage.getItem(KUNCI_DRAF); return v ? Object.assign(kosong(), JSON.parse(v)) : null; }catch(e){ return null; } }
+function simpanDraf(){ try{ localStorage.setItem(KUNCI_DRAF, JSON.stringify(S.input)); }catch(e){} }
+function muatRiwayat(){ try{ const v = localStorage.getItem(KUNCI_RIWAYAT); const a = v ? JSON.parse(v) : []; return Array.isArray(a) ? a : []; }catch(e){ return []; } }
+function simpanRiwayat(list){ try{ localStorage.setItem(KUNCI_RIWAYAT, JSON.stringify(list)); return true; }catch(e){ tampilToast("Riwayat tidak dapat disimpan di peramban ini."); return false; } }
+function persist(){
+  if(!S.hasil) return;
+  const list = muatRiwayat();
+  if(!S.id) S.id = "r" + Date.now();
+  const item = {id:S.id, waktu:Date.now(), input:S.input, hasil:S.hasil};
+  const i = list.findIndex(x => x.id === S.id);
+  if(i >= 0) list[i] = item; else list.unshift(item);
+  simpanRiwayat(list.slice(0, 30));
+}
+let tToast = null;
+function tampilToast(t){ const el = $("#toast"); el.textContent = t; el.hidden = false; clearTimeout(tToast); tToast = setTimeout(() => { el.hidden = true; }, 4200); }
+
+function setPath(obj, path, val){
+  const p = path.split("."); let o = obj;
+  for(let i=0;i<p.length-1;i++){ const k = /^\d+$/.test(p[i]) ? +p[i] : p[i]; if(o[k] == null) o[k] = /^\d+$/.test(p[i+1]) ? [] : {}; o = o[k]; }
+  const last = /^\d+$/.test(p[p.length-1]) ? +p[p.length-1] : p[p.length-1];
+  o[last] = val;
+}
+
+/* ============ Normalisasi ============ */
+function normBloom(x){ const m = String(x||"").toUpperCase().match(/C\s*([1-6])/); return m ? "C"+m[1] : String(x||""); }
+function normSolo(x){
+  const s = String(x||"").toLowerCase();
+  if(s.includes("pre")) return "Prestructural";
+  if(s.includes("uni")) return "Unistructural";
+  if(s.includes("multi")) return "Multistructural";
+  if(s.includes("rel")) return "Relational";
+  if(s.includes("ext")) return "Extended Abstract";
+  return String(x||"");
+}
+function normInti(d){
+  d = d || {};
+  const cp = d.analisisCP || {};
+  return {
+    analisisCP: { tabel: arr(cp.tabel).map(r => ({cp:str(r.cp),kompetensi:str(r.kompetensi),pengetahuan:str(r.pengetahuan),keterampilan:str(r.keterampilan),kompleksitas:str(r.kompleksitas)})), konteksPenerapan:str(cp.konteksPenerapan), potensiKarakter:str(cp.potensiKarakter) },
+    analisisMateri: arr(d.analisisMateri).map((m,i) => ({urutan:Number(m.urutan)||i+1, tahap:str(m.tahap), submateri:str(m.submateri), deskripsi:str(m.deskripsi)})),
+    catatanTahapTidakDigunakan: str(d.catatanTahapTidakDigunakan),
+    pemilihanLevelKognitif: { rentangBloom: str((d.pemilihanLevelKognitif||{}).rentangBloom), alasan: str((d.pemilihanLevelKognitif||{}).alasan) },
+    tujuanPembelajaran: arr(d.tujuanPembelajaran).map((t,i) => normTP(t,i))
+  };
+}
+function normTP(t,i){ return {kode:str(t.kode)||("TP-"+(i+1)), gradasi:str(t.gradasi), rumusan:str(t.rumusan), kko:str(t.kko), levelBloom:normBloom(t.levelBloom), levelSOLO:normSolo(t.levelSOLO), alasanLevel:str(t.alasanLevel), buktiKetercapaian:str(t.buktiKetercapaian)}; }
+function normATP(d){
+  d = d || {};
+  return { alurTP: arr(d.alurTP).map((a,i) => ({urutan:Number(a.urutan)||i+1, kodeTP:str(a.kodeTP), materiPokok:str(a.materiPokok), alokasiJP:Number(a.alokasiJP)||0, pertemuanKe:str(a.pertemuanKe)})), rasionalAlur: str(d.rasionalAlur) };
+}
+function migrasi(h, input){
+  h.integrasiKBC = h.integrasiKBC || []; h.integrasiKeislaman = h.integrasiKeislaman || [];
+  if(!Array.isArray(h.alurTP)){
+    h.alurTP = arr(h.tujuanPembelajaran).map((t,i) => ({urutan:i+1, kodeTP:t.kode, materiPokok:(input && input.materi) || "", alokasiJP:Number(t.estimasiJP)||0, pertemuanKe:""}));
+    h.rasionalAlur = h.rasionalAlur || "";
+  }
+  arr(h.tujuanPembelajaran).forEach(t => { delete t.estimasiJP; });
+  return h;
+}
+function normKBC(d){ return arr((d||{}).integrasiKBC).map(k => ({kodeTP:str(k.kodeTP), nilaiPancaCinta: Array.isArray(k.nilaiPancaCinta) ? k.nilaiPancaCinta.map(str).filter(Boolean) : str(k.nilaiPancaCinta).split(",").map(s=>s.trim()).filter(Boolean), rumusan:str(k.rumusan), perilakuTeramati:str(k.perilakuTeramati), penerapanKehidupan:str(k.penerapanKehidupan)})); }
+function normIslam(d){
+  d = d || {};
+  return {
+    integrasiKeislaman: arr(d.integrasiKeislaman).map(s => ({jenisSumber:str(s.jenisSumber), rujukan:str(s.rujukan), teksArab:str(s.teksArab), terjemahanAtauMakna:str(s.terjemahanAtauMakna), jenisIntegrasi:str(s.jenisIntegrasi).toLowerCase().includes("konsep") ? "konseptual" : "nilai", keterkaitan:str(s.keterkaitan), tingkatKeyakinan:(str(s.tingkatKeyakinan).toLowerCase().match(/tinggi|sedang|rendah/)||["rendah"])[0]})),
+    catatanKejujuranSumber: str(d.catatanKejujuranSumber)
+  };
+}
+
+/* ============ Prompt ============ */
+function blokInput(i){
+  return `DATA MASUKAN GURU
+- Nama madrasah: ${i.madrasah || "-"}
+- Jenjang: ${i.jenjang}
+- Mata pelajaran: ${i.mapel || "-"}
+- Fase/Kelas: Fase ${i.fase} / Kelas ${i.kelas}
+- Semester: ${i.semester}
+- Elemen CP: ${i.elemen || "-"}
+- Teks CP: ${i.cp}
+- Materi pokok/topik: ${i.materi}
+- Alokasi waktu: ${i.jp ? i.jp + " JP" : "tidak disebutkan"}${i.pertemuan ? " dalam " + i.pertemuan + " pertemuan" : ""}
+- Catatan guru: ${i.catatan || "-"}`;
+}
+function ringkasTP(h){ return JSON.stringify(arr(h && h.tujuanPembelajaran).map(t => ({kode:t.kode, gradasi:t.gradasi, rumusan:t.rumusan, levelBloom:t.levelBloom, levelSOLO:t.levelSOLO}))); }
+function promptInti(i){
+  return `${SYSTEM}
+
+${blokInput(i)}
+
+TUGAS TAHAP INI: kerjakan bagian A sampai G. Kembalikan satu objek JSON dengan kunci berurutan persis: analisisCP, analisisMateri, catatanTahapTidakDigunakan, pemilihanLevelKognitif, tujuanPembelajaran.
+Skema:
+${SKEMA_INTI}
+Catatan skema: "levelBloom" berisi satu kode (C1, C2, C3, C4, C5, atau C6). "levelSOLO" berisi salah satu dari Unistructural, Multistructural, Relational, Extended Abstract. "kko" berisi KKO yang dipakai dalam rumusan (paling banyak dua, dipisah koma). Alokasi waktu TIDAK dicantumkan di bagian TP; alokasi waktu akan disusun pada Alur Tujuan Pembelajaran (ATP). "catatanTahapTidakDigunakan" diisi alasan tahap yang tidak dipakai, atau string kosong bila semua tahap dipakai.
+${ATURAN_UMUM}`;
+}
+function promptATP(i, h){
+  return `${SYSTEM}
+
+${blokInput(i)}
+
+ANALISIS MATERI:
+${JSON.stringify(arr(h && h.analisisMateri).map(m => ({urutan:m.urutan, tahap:m.tahap, submateri:m.submateri})))}
+
+TUJUAN PEMBELAJARAN YANG SUDAH DIANALISIS:
+${ringkasTP(h)}
+
+TUGAS TAHAP INI: susun Alur Tujuan Pembelajaran (ATP), yaitu urutan TP di atas yang logis dan bertahap (dari prasyarat ke kompetensi yang lebih kompleks), beserta materi pokok/submateri dan alokasi waktu setiap TP.
+Ketentuan:
+- Gunakan SEMUA kodeTP di atas, masing-masing tepat satu kali; jangan membuat TP baru dan jangan mengubah rumusan TP.
+- "materiPokok" berisi materi pokok atau submateri yang dipelajari untuk mencapai TP tersebut, selaras dengan analisis materi.
+- "alokasiJP" berupa bilangan bulat yang proporsional dengan level kognitif, kedalaman SOLO, dan keluasan materi.${i.jp ? " Jumlah alokasiJP seluruh TP harus sama dengan atau kurang dari " + i.jp + " JP; sisakan waktu untuk asesmen sumatif bila memungkinkan." : ""}
+- "pertemuanKe" berisi nomor pertemuan (mis. "1" atau "2–3")${i.pertemuan ? " dalam rentang 1 sampai " + i.pertemuan : ""}.
+- "rasionalAlur" menjelaskan secara singkat alasan urutan dan pembagian waktu.
+Skema:
+${SKEMA_ATP}
+${ATURAN_UMUM}`;
+}
+function promptKBC(i, h){
+  return `${SYSTEM}
+
+${blokInput(i)}
+
+TUJUAN PEMBELAJARAN YANG SUDAH DIRUMUSKAN:
+${ringkasTP(h)}
+
+TUGAS TAHAP INI: kerjakan bagian H (Integrasi KBC) saja untuk TP di atas. Buat satu entri untuk setiap TP (gunakan kodeTP yang sama). Pilih hanya nilai Panca Cinta yang relevan (biasanya satu atau dua per TP) dan tulis nama nilai persis salah satu dari: "Cinta Allah dan Rasul-Nya", "Cinta Ilmu", "Cinta Diri dan Sesama", "Cinta Lingkungan", "Cinta Tanah Air". Rumusan wajib memuat perilaku yang dapat diamati; jangan memakai kata "mencintai", "memahami nilai", atau "menghayati" tanpa perilaku teramati.
+Skema:
+${SKEMA_KBC}
+${ATURAN_UMUM}`;
+}
+function promptIslam(i, h){
+  return `${SYSTEM}
+
+${blokInput(i)}
+
+TUJUAN PEMBELAJARAN:
+${ringkasTP(h)}
+
+TUGAS TAHAP INI: kerjakan bagian I (Integrasi Al-Qur'an, hadis, dan kitab kuning) saja.
+Ketentuan tambahan:
+- Paling banyak 5 sumber; utamakan relevansi dan kejujuran daripada jumlah.
+- Rujukan Al-Qur'an ditulis dengan format "QS. Nama Surah [nomor surah]: nomor ayat".
+- Untuk hadis, sebutkan perawi dan kitab sumber hanya jika Anda yakin; bila tidak, tulis "(perlu verifikasi perawi dan sumber)" pada rujukan dan beri tingkat keyakinan rendah.
+- Untuk kitab kuning, sebutkan nama kitab dan pengarang; jangan mengarang nomor halaman atau kutipan.
+- Isi "teksArab" hanya jika Anda benar-benar yakin pada setiap katanya; bila ragu sedikit pun, isi dengan string kosong.
+- "terjemahanAtauMakna" berupa ringkasan makna dengan kata-kata sendiri, bukan kutipan terjemahan resmi, kecuali Anda yakin.
+- Bedakan dengan tegas integrasi konseptual dan integrasi nilai.
+- "catatanKejujuranSumber" menjelaskan batas keyakinan Anda dan apa yang harus diverifikasi guru.
+Skema:
+${SKEMA_ISLAM}
+${ATURAN_UMUM}`;
+}
+function promptBagian(tab, i, h){
+  const ringkas = JSON.stringify({analisisCP:h.analisisCP, analisisMateri:h.analisisMateri, pemilihanLevelKognitif:h.pemilihanLevelKognitif, tujuanPembelajaran:h.tujuanPembelajaran}).slice(0, 30000);
+  const kepala = `${SYSTEM}\n\n${blokInput(i)}\n\nHASIL ANALISIS SAAT INI (sebagai konteks):\n${ringkas}\n\n`;
+  if(tab === "A") return kepala + `TUGAS: rumuskan ulang bagian A (analisis CP) dengan lebih cermat. Kembalikan JSON: { "analisisCP": { "tabel": [{ "cp": "", "kompetensi": "", "pengetahuan": "", "keterampilan": "", "kompleksitas": "" }], "konteksPenerapan": "", "potensiKarakter": "" } }\n${ATURAN_UMUM}`;
+  if(tab === "B") return kepala + `TUGAS: rumuskan ulang bagian B (analisis materi). Kembalikan JSON: { "analisisMateri": [{ "urutan": 1, "tahap": "", "submateri": "", "deskripsi": "" }], "catatanTahapTidakDigunakan": "" }\n${ATURAN_UMUM}`;
+  if(tab === "CE") return kepala + `TUGAS: tinjau ulang bagian C–E (level Bloom dan SOLO) untuk TP yang ada tanpa mengubah rumusan TP. Kembalikan JSON: { "pemilihanLevelKognitif": { "rentangBloom": "", "alasan": "" }, "levelTP": [{ "kode": "", "kko": "", "levelBloom": "C1-C6", "levelSOLO": "Unistructural|Multistructural|Relational|Extended Abstract", "alasanLevel": "" }] }\n${ATURAN_UMUM}`;
+  if(tab === "FG") return kepala + `TUGAS: rumuskan ulang bagian F–G (gradasi dan rumusan TP) secara lebih cermat dan proporsional. Jangan mencantumkan alokasi waktu. Kembalikan JSON: { "tujuanPembelajaran": [{ "kode": "TP-1", "gradasi": "", "rumusan": "", "kko": "", "levelBloom": "C1-C6", "levelSOLO": "", "alasanLevel": "", "buktiKetercapaian": "" }] }\n${ATURAN_UMUM}`;
+  if(tab === "ATP") return promptATP(i, h);
+  if(tab === "H") return promptKBC(i, h);
+  if(tab === "I") return promptIslam(i, h);
+  return "";
+}
+
+/* ============ AI ============ */
+async function ambilSample(){
+  if(!window.claude || typeof window.claude.use !== "function") return null;
+  try{ return await window.claude.use("sample"); }catch(e){ return null; }
+}
+function pesanGalat(e){
+  const c = (e && e.code) || "upstream_error";
+  const peta = {
+    unavailable:"Fitur AI tidak tersedia di tampilan ini. Buka aplikasi melalui tautan claude.ai Anda.",
+    not_granted:"Akses AI belum diizinkan. Izinkan halaman ini memakai Claude, lalu coba lagi.",
+    sampling_disabled:"Fitur AI tidak tersedia untuk akun ini.",
+    not_declared:"Fitur AI tidak tersedia di tampilan ini.",
+    capability_disabled:"Fitur AI tidak tersedia di tampilan ini.",
+    capability_removed:"Fitur AI tidak tersedia di tampilan ini. Perbarui aplikasi Claude Anda.",
+    invalid_json:"Jawaban AI tidak berformat JSON yang valid. Silakan coba lagi.",
+    rate_limited:"Batas penggunaan AI tercapai untuk sementara. Tunggu beberapa saat, lalu coba lagi.",
+    session_expired:"Sesi Anda berakhir. Masuk kembali ke Claude, lalu coba lagi.",
+    refused:"AI tidak dapat memproses permintaan ini. Periksa kembali teks CP dan materi.",
+    prompt_too_large:"Masukan terlalu panjang. Persingkat teks CP atau catatan guru.",
+    empty_completion:"AI tidak menghasilkan jawaban. Silakan coba lagi.",
+    cancelled:"Proses dihentikan."
+  };
+  return peta[c] || "Layanan AI sedang bermasalah atau koneksi terputus. Silakan coba lagi.";
+}
+
+async function jalankan(dari){
+  S.view = "proses"; S.error = null; S.resumeFrom = dari; S.stage = dari;
+  S.t0 = Date.now(); render();
+  clearInterval(pewaktu);
+  pewaktu = setInterval(() => { const w = $("#waktu"); if(w) w.textContent = formatWaktu(Date.now() - S.t0); }, 1000);
+  const sample = await ambilSample();
+  if(!sample){ gagal({code:"unavailable"}, dari); return; }
+  S.ctl = new AbortController();
+  const signal = S.ctl.signal;
+  let tahap = dari;
+  try{
+    if(dari <= 3){
+      tahap = 0;
+      const inti = await sample.json(promptInti(S.input), {
+        modelTier:"complex", signal,
+        onText: ({text}) => {
+          let st = 0;
+          if(text.includes('"analisisMateri"')) st = 1;
+          if(text.includes('"pemilihanLevelKognitif"')) st = 2;
+          if(text.includes('"tujuanPembelajaran"')) st = 3;
+          if(st > S.stage){ S.stage = st; renderLangkah(); }
+        }
+      });
+      const n = normInti(inti);
+      if(!n.tujuanPembelajaran.length) throw {code:"invalid_json"};
+      S.hasil = Object.assign({alurTP:[], rasionalAlur:"", integrasiKBC:[], integrasiKeislaman:[], catatanKejujuranSumber:""}, n);
+    }
+    if(dari <= 4){
+      tahap = 4; S.stage = 4; renderLangkah();
+      const atp = normATP(await sample.json(promptATP(S.input, S.hasil), {signal}));
+      if(!atp.alurTP.length) throw {code:"invalid_json"};
+      Object.assign(S.hasil, atp);
+    }
+    if(dari <= 5){
+      tahap = 5; S.stage = 5; renderLangkah();
+      const kbc = await sample.json(promptKBC(S.input, S.hasil), {signal});
+      S.hasil.integrasiKBC = normKBC(kbc);
+    }
+    tahap = 6; S.stage = 6; renderLangkah();
+    const isl = await sample.json(promptIslam(S.input, S.hasil), {modelTier:"complex", signal});
+    Object.assign(S.hasil, normIslam(isl));
+    clearInterval(pewaktu);
+    persist();
+    S.view = "hasil"; S.tab = "A"; S.ctl = null;
+    render();
+    window.scrollTo({top:0});
+  }catch(e){
+    gagal(e, tahap <= 3 ? 0 : tahap);
+  }
+}
+function gagal(e, dari){
+  clearInterval(pewaktu);
+  S.ctl = null; S.error = e; S.resumeFrom = dari;
+  if(dari > 0 && S.hasil) persist();
+  render();
+}
+function formatWaktu(ms){ const d = Math.floor(ms/1000); return Math.floor(d/60) + ":" + String(d%60).padStart(2,"0"); }
+
+async function buatUlang(tab){
+  if(S.regen[tab] || !S.hasil) return;
+  S.regen[tab] = true; renderHasilIsi();
+  const sample = await ambilSample();
+  try{
+    if(!sample) throw {code:"unavailable"};
+    const tier = (tab === "H") ? "default" : "complex";
+    const d = await sample.json(promptBagian(tab, S.input, S.hasil), {modelTier:tier, cache:false});
+    const h = S.hasil;
+    if(tab === "A"){ const n = normInti({analisisCP:d.analisisCP}); if(!n.analisisCP.tabel.length) throw {code:"invalid_json"}; h.analisisCP = n.analisisCP; }
+    else if(tab === "B"){ const n = normInti(d); if(!n.analisisMateri.length) throw {code:"invalid_json"}; h.analisisMateri = n.analisisMateri; h.catatanTahapTidakDigunakan = n.catatanTahapTidakDigunakan; }
+    else if(tab === "CE"){
+      if(d.pemilihanLevelKognitif) h.pemilihanLevelKognitif = normInti(d).pemilihanLevelKognitif;
+      arr(d.levelTP).forEach(l => { const t = h.tujuanPembelajaran.find(x => x.kode === str(l.kode)); if(t){ if(l.kko) t.kko = str(l.kko); t.levelBloom = normBloom(l.levelBloom); t.levelSOLO = normSolo(l.levelSOLO); t.alasanLevel = str(l.alasanLevel); } });
+    }
+    else if(tab === "FG"){ const tp = arr(d.tujuanPembelajaran).map((t,i) => normTP(t,i)); if(!tp.length) throw {code:"invalid_json"}; h.tujuanPembelajaran = tp; tampilToast("TP diperbarui. Buat ulang ATP dan Integrasi KBC agar selaras dengan TP baru."); }
+    else if(tab === "ATP"){ const a = normATP(d); if(!a.alurTP.length) throw {code:"invalid_json"}; Object.assign(h, a); }
+    else if(tab === "H"){ const k = normKBC(d); if(!k.length) throw {code:"invalid_json"}; h.integrasiKBC = k; }
+    else if(tab === "I"){ Object.assign(h, normIslam(d)); }
+    persist();
+    if(tab !== "FG") tampilToast("Bagian diperbarui.");
+  }catch(e){
+    tampilToast(pesanGalat(e));
+  }finally{
+    S.regen[tab] = false; renderHasilIsi();
+  }
+}
+
+/* ============ Validasi ============ */
+function hitungKKO(teks){
+  let t = " " + String(teks||"").toLowerCase().replace(/[.,;:()]/g," ") + " ";
+  t = t.replace(/dengan\s+(menggunakan|menerapkan)/g, " ");
+  const ketemu = [];
+  KKO.slice().sort((a,b) => b.length - a.length).forEach(k => {
+    const re = new RegExp("\\s" + k.replace(/ /g,"\\s+") + "\\s", "g");
+    if(re.test(t)){ ketemu.push(k); t = t.replace(re, " "); }
+  });
+  return ketemu;
+}
+function masalahTP(t){
+  const m = [];
+  const k = hitungKKO(t.rumusan);
+  if(k.length > 2) m.push(`Memuat ${k.length} KKO (${k.join(", ")}). Sederhanakan menjadi satu atau dua KKO.`);
+  if(t.levelSOLO === "Prestructural") m.push("Berlevel Prestructural. Level ini hanya untuk diagnostik, bukan TP.");
+  return m;
+}
+function masalahKBC(k){
+  const teks = (k.rumusan + " " + k.perilakuTeramati).toLowerCase();
+  const kata = KATA_TAK_TERUKUR.filter(w => teks.includes(w));
+  if(kata.length && k.perilakuTeramati.trim().length < 15) return [`Memuat kata tidak terukur (${kata.join(", ")}) tanpa perilaku teramati.`];
+  if(KATA_TAK_TERUKUR.some(w => k.perilakuTeramati.toLowerCase().includes(w))) return ["Kolom perilaku teramati masih memuat kata tidak terukur."];
+  return [];
+}
+function totalJP(h){ return arr(h.alurTP).reduce((a,t) => a + (Number(t.alokasiJP)||0), 0); }
+function jpTP(h, kode){ return arr(h.alurTP).filter(a => a.kodeTP === kode).reduce((a,t) => a + (Number(t.alokasiJP)||0), 0); }
+function daftarValidasi(){
+  const h = S.hasil; const out = [];
+  if(!h) return out;
+  h.tujuanPembelajaran.forEach(t => masalahTP(t).forEach(p => out.push({tab:"FG", teks:`${t.kode}: ${p}`})));
+  h.integrasiKBC.forEach(k => masalahKBC(k).forEach(p => out.push({tab:"H", teks:`KBC ${k.kodeTP}: ${p}`})));
+  const jp = Number(S.input.jp);
+  const tot = totalJP(h);
+  if(jp && tot > jp) out.push({tab:"ATP", teks:`Total alokasi ATP ${tot} JP melebihi alokasi ${jp} JP.`});
+  const diATP = new Set(arr(h.alurTP).map(a => a.kodeTP));
+  h.tujuanPembelajaran.forEach(t => { if(!diATP.has(t.kode)) out.push({tab:"ATP", teks:`${t.kode} belum dimasukkan ke dalam ATP.`}); });
+  arr(h.alurTP).forEach(a => { if(!h.tujuanPembelajaran.some(t => t.kode === a.kodeTP)) out.push({tab:"ATP", teks:`ATP memuat ${a.kodeTP || "kode kosong"} yang tidak ada di daftar TP.`}); });
+  const rendah = h.integrasiKeislaman.filter(s => s.tingkatKeyakinan === "rendah").length;
+  if(rendah) out.push({tab:"I", teks:`${rendah} sumber keislaman bertingkat keyakinan rendah dan wajib diverifikasi.`});
+  return out;
+}
+
+/* ============ Tampilan ============ */
+function render(){
+  const app = $("#app");
+  const n = muatRiwayat().length;
+  app.innerHTML = `
+  <header class="kepala">
+    <div class="wrap kepala-isi">
+      <div class="merek">${IKON.bintang}<div><h1>PERTAMA</h1><p>Perumus Tujuan Pembelajaran Madrasah</p></div></div>
+      <nav class="kepala-aksi" aria-label="Menu">
+        <button class="btn-kepala" data-act="laci">Riwayat (${n})</button>
+        <button class="btn-kepala" data-act="baru">Analisis baru</button>
+      </nav>
+    </div>
+    <div class="pita" aria-hidden="true"></div>
+  </header>
+  <main class="wrap">
+    ${viewLangkahUtama()}
+    ${S.view === "form" ? viewForm() : S.view === "proses" ? viewProses() : `<div id="hasil-isi">${viewHasil()}</div>`}
+  </main>
+  <footer class="kaki">Hasil PERTAMA adalah draf yang disusun dengan bantuan AI. Guru tetap bertanggung jawab memeriksa kesesuaiannya dengan CP resmi, kondisi peserta didik, serta ketepatan teks dan rujukan keislaman.</footer>
+  ${S.laci ? viewLaci() : ""}`;
+}
+function viewLangkahUtama(){
+  const idx = {form:0, proses:1, hasil:2}[S.view];
+  const nama = ["Isi data","Proses","Hasil"];
+  return `<ol class="langkah-utama" aria-label="Tahapan">${nama.map((t,i) => `<li class="${i===idx?"kini":i<idx?"lewat":""}" ${i===idx?'aria-current="step"':""}><span class="no">${i+1}</span>${t}</li>`).join("")}</ol>`;
+}
+function fld(id, label, html, o={}){
+  const err = S.formErr[id];
+  return `<div class="fld ${o.full?"penuh":""} ${err?"galat":""}"><label for="f-${id}">${label}${o.wajib?'<span class="wajib">wajib</span>':""}</label>${html}${o.bantu?`<p class="bantu" id="b-${id}">${o.bantu}</p>`:""}${err?`<p class="pesan-galat" id="e-${id}">${err}</p>`:""}</div>`;
+}
+function opsi(list, val){ return list.map(x => `<option value="${esc(x)}" ${String(x)===String(val)?"selected":""}>${esc(x)}</option>`).join(""); }
+function viewForm(){
+  const i = S.input; const errN = Object.keys(S.formErr).length;
+  const aria = id => S.formErr[id] ? `aria-invalid="true" aria-describedby="e-${id}"` : "";
+  return `<section class="lembar">
+    <h2>Data capaian pembelajaran</h2>
+    <p class="pengantar">Isi identitas pembelajaran dan tempel teks CP. PERTAMA akan menganalisis CP, merumuskan TP bertahap dengan Taksonomi Bloom Revisi dan SOLO, lalu mengintegrasikan Kurikulum Berbasis Cinta dan sumber keislaman.</p>
+    ${errN ? `<div class="ringkas-galat" role="alert">Lengkapi ${errN} isian yang ditandai sebelum melanjutkan.</div>` : ""}
+    <form id="form-cp" class="grid-form" novalidate>
+      ${fld("madrasah","Nama madrasah",`<input id="f-madrasah" name="madrasah" value="${esc(i.madrasah)}" placeholder="mis. MTs Negeri 1 Makassar" autocomplete="organization">`,{bantu:"Opsional. Dipakai pada kop dokumen ekspor."})}
+      ${fld("jenjang","Jenjang",`<select id="f-jenjang" name="jenjang">${opsi(["MI","MTs","MA"],i.jenjang)}</select>`)}
+      ${fld("mapel","Mata pelajaran",`<input id="f-mapel" name="mapel" value="${esc(i.mapel)}" placeholder="mis. Matematika">`)}
+      <div class="fld"><label>Fase dan kelas</label><div class="dua">
+        <select id="f-fase" name="fase" aria-label="Fase">${["A","B","C","D","E","F"].map(f => `<option value="${f}" ${f===i.fase?"selected":""}>Fase ${f}</option>`).join("")}</select>
+        <select id="f-kelas" name="kelas" aria-label="Kelas">${["I","II","III","IV","V","VI","VII","VIII","IX","X","XI","XII"].map(k => `<option value="${k}" ${k===i.kelas?"selected":""}>Kelas ${k}</option>`).join("")}</select>
+      </div></div>
+      ${fld("semester","Semester",`<select id="f-semester" name="semester">${opsi(["Ganjil","Genap"],i.semester)}</select>`)}
+      ${fld("elemen","Elemen CP",`<input id="f-elemen" name="elemen" value="${esc(i.elemen)}" placeholder="mis. Bilangan">`)}
+      ${fld("cp","Teks CP",`<textarea id="f-cp" name="cp" rows="5" ${aria("cp")} placeholder="Tempel teks capaian pembelajaran sesuai fase dan elemen">${esc(i.cp)}</textarea>`,{full:true,wajib:true})}
+      ${fld("materi","Materi pokok atau topik",`<input id="f-materi" name="materi" value="${esc(i.materi)}" ${aria("materi")} placeholder="mis. Perbandingan senilai dan berbalik nilai">`,{full:true,wajib:true})}
+      <div class="fld ${S.formErr.jp?"galat":""}"><label>Alokasi waktu</label><div class="dua">
+        <input id="f-jp" name="jp" type="number" min="1" inputmode="numeric" value="${esc(i.jp)}" placeholder="Jumlah JP" aria-label="Jumlah JP" ${aria("jp")}>
+        <input id="f-pertemuan" name="pertemuan" type="number" min="1" inputmode="numeric" value="${esc(i.pertemuan)}" placeholder="Jumlah pertemuan" aria-label="Jumlah pertemuan">
+      </div>${S.formErr.jp?`<p class="pesan-galat" id="e-jp">${S.formErr.jp}</p>`:`<p class="bantu">Dipakai untuk menyusun alokasi waktu pada Alur TP (ATP).</p>`}</div>
+      ${fld("catatan","Catatan tambahan guru",`<textarea id="f-catatan" name="catatan" rows="3" placeholder="mis. karakteristik peserta didik, kemampuan awal, konteks lokal">${esc(i.catatan)}</textarea>`,{full:true,bantu:"Opsional."})}
+    </form>
+    <div class="aksi-form">
+      <button class="btn" data-act="contoh" type="button">Isi contoh</button>
+      <button class="btn btn-utama" data-act="kirim" type="button">Analisis dan Rumuskan TP</button>
+    </div>
+  </section>`;
+}
+function viewProses(){
+  const e = S.error;
+  return `<section class="lembar proses" aria-live="polite">
+    <h2>${e ? "Proses terhenti" : "Sedang menyusun perumusan TP"}</h2>
+    <p class="pengantar">${esc(S.input.mapel || "Mata pelajaran")}, Fase ${esc(S.input.fase)} Kelas ${esc(S.input.kelas)}: ${esc(S.input.materi)}</p>
+    <div id="langkah">${htmlLangkah()}</div>
+    ${e ? `<div class="kotak-galat" role="alert"><strong>${esc(pesanGalat(e))}</strong>${S.resumeFrom > 0 ? `<p style="margin:.4rem 0 0">Tahap yang sudah selesai tetap tersimpan; proses akan dilanjutkan dari tahap yang terhenti.</p>` : ""}</div>
+      <div class="aksi-form"><button class="btn" data-act="kembali">Kembali ke form</button><button class="btn btn-utama" data-act="coba">Coba lagi</button></div>`
+      : `<div class="aksi-form"><span class="waktu">Waktu berjalan <span id="waktu">0:00</span>. Proses biasanya 1 sampai 4 menit.</span><button class="btn btn-kecil" data-act="henti">Hentikan</button></div>`}
+  </section>`;
+}
+function htmlLangkah(){
+  return `<ol class="daftar-proses">${LANGKAH.map((t,i) => {
+    const st = i < S.stage ? "selesai" : (i === S.stage && !S.error) ? "aktif" : "";
+    return `<li class="${st}"><span class="ikon">${i < S.stage ? "✓" : i === S.stage && !S.error ? "" : i+1}</span>${t}${st==="aktif"?'<span class="sr"> sedang berjalan</span>':""}</li>`;
+  }).join("")}</ol>`;
+}
+function renderLangkah(){ const el = $("#langkah"); if(el) el.innerHTML = htmlLangkah(); }
+
+function viewHasil(){
+  const i = S.input; const v = daftarValidasi();
+  return `<section>
+    <div class="bagian-kepala"><h2 style="font-size:1.55rem;color:var(--zamrud)">${esc(i.materi)}</h2></div>
+    <div class="identitas">
+      ${i.madrasah?`<span><b>${esc(i.madrasah)}</b></span>`:""}
+      <span>Mapel <b>${esc(i.mapel||"-")}</b></span>
+      <span>Jenjang <b>${esc(i.jenjang)}</b></span>
+      <span>Fase/Kelas <b>${esc(i.fase)} / ${esc(i.kelas)}</b></span>
+      <span>Semester <b>${esc(i.semester)}</b></span>
+      ${i.jp?`<span>Alokasi <b>${esc(i.jp)} JP${i.pertemuan?", "+esc(i.pertemuan)+" pertemuan":""}</b></span>`:""}
+    </div>
+    <div class="bar-aksi">
+      <button class="btn btn-kecil" data-act="ubah">Ubah input</button>
+      <button class="btn btn-kecil" data-act="docx">${IKON.unduh}Ekspor Word</button>
+      <button class="btn btn-kecil" data-act="pdf">${IKON.unduh}Ekspor PDF</button>
+    </div>
+    <div id="validasi">${htmlValidasi(v)}</div>
+    <div class="tabs" role="tablist" aria-label="Bagian hasil">${TABS.map(t => `<button class="tab" role="tab" id="tab-${t.k}" aria-controls="panel" aria-selected="${S.tab===t.k}" data-act="tab" data-tab="${t.k}">${t.huruf?`<span class="huruf">${t.huruf}</span>`:""}${t.label}</button>`).join("")}</div>
+    <div id="panel" role="tabpanel" aria-labelledby="tab-${S.tab}">${viewTab(S.tab)}</div>
+  </section>`;
+}
+function htmlValidasi(v){
+  if(!v.length) return `<div class="validasi bersih">Validasi otomatis: tidak ditemukan TP dengan lebih dari dua KKO, level Prestructural, maupun rumusan KBC tidak terukur.</div>`;
+  return `<details class="validasi" open><summary>Validasi otomatis: ${v.length} hal perlu ditinjau</summary><ul>${v.map(x => `<li>${esc(x.teks)} <button class="btn btn-kecil" style="padding:.05rem .45rem;margin-left:.2rem" data-act="tab" data-tab="${x.tab}">Lihat</button></li>`).join("")}</ul></details>`;
+}
+function renderHasilIsi(){
+  if(S.view !== "hasil") return;
+  const box = $("#hasil-isi"); if(!box) return;
+  const y = window.scrollY; box.innerHTML = viewHasil(); window.scrollTo({top:y});
+}
+function kepalaBagian(tab, judul, bisaUlang=true){
+  const busy = S.regen[tab];
+  return `<div class="bagian-kepala"><h2>${judul}</h2><div class="aksi">
+    <button class="btn btn-kecil" data-act="salin" data-tab="${tab}">${IKON.salin}Salin tabel</button>
+    ${bisaUlang?`<button class="btn btn-kecil" data-act="regen" data-tab="${tab}" ${busy?"disabled":""}>${IKON.ulang}${busy?"Membuat ulang…":"Buat ulang bagian ini"}</button>`:""}
+  </div></div>
+  <p class="petunjuk">${bisaUlang?"Klik teks untuk menyunting langsung; perubahan tersimpan otomatis. Membuat ulang hanya mengganti bagian ini.":"Tabel ini disusun otomatis dari bagian lain."}</p>`;
+}
+const ed = (path, val, tag="td", cls="") => `<${tag} class="${cls}" contenteditable="true" data-path="${path}">${esc(val)}</${tag}>`;
+function blokEdit(judul, path, val){ return `<div class="blok"><h3>${judul}</h3>${ed(path,val,"div")}</div>`; }
+function lencanaBloom(b){ return `<span class="lencana b-${esc(b)}" title="${esc(NAMA_BLOOM[b]||"")}">${esc(b||"-")} ${esc(NAMA_BLOOM[b]||"")}</span>`; }
+function lencanaSolo(s){ return `<span class="lencana s-${SLUG_SOLO[s]||"uni"}">${esc(s||"-")}</span>`; }
+function pilih(path, val, list, cls, label){
+  return `<select class="pilih ${cls}" data-path="${path}" aria-label="${label}">${list.includes(val)?"":`<option selected>${esc(val||"-")}</option>`}${list.map(o => `<option ${o===val?"selected":""}>${o}</option>`).join("")}</select>`;
+}
+function viewTab(tab){
+  const h = S.hasil; const wrap = c => `<div class="${S.regen[tab]?"memuat":""}">${c}</div>`;
+  if(tab === "A"){
+    const rows = h.analisisCP.tabel.map((r,i) => `<tr>${["cp","kompetensi","pengetahuan","keterampilan","kompleksitas"].map(k => ed(`analisisCP.tabel.${i}.${k}`, r[k])).join("")}</tr>`).join("");
+    return kepalaBagian("A","A. Analisis capaian pembelajaran") + wrap(`<div class="tabel-wrap"><table><thead><tr><th>CP</th><th>Kompetensi</th><th>Pengetahuan</th><th>Keterampilan</th><th>Kompleksitas</th></tr></thead><tbody>${rows}</tbody></table></div>
+      ${blokEdit("Konteks penerapan","analisisCP.konteksPenerapan",h.analisisCP.konteksPenerapan)}
+      ${blokEdit("Potensi penguatan karakter","analisisCP.potensiKarakter",h.analisisCP.potensiKarakter)}`);
+  }
+  if(tab === "B"){
+    const n = h.analisisMateri.length;
+    const items = h.analisisMateri.map((m,i) => `<li style="--i:${i}">
+      <div class="kartu-sub"><div class="atas"><span class="urut">${m.urutan}</span><span class="g-chip">${esc(m.tahap)}</span></div>
+      ${ed(`analisisMateri.${i}.submateri`, m.submateri, "div", "judul")}
+      ${ed(`analisisMateri.${i}.deskripsi`, m.deskripsi, "div", "desk")}</div>${i < n-1 ? IKON.panah : ""}</li>`).join("");
+    return kepalaBagian("B","B. Analisis materi dan alur submateri") + wrap(`<ol class="tangga">${items}</ol>
+      ${blokEdit("Tahap yang tidak digunakan dan alasannya","catatanTahapTidakDigunakan",h.catatanTahapTidakDigunakan || "")}`);
+  }
+  if(tab === "CE"){
+    const rows = h.tujuanPembelajaran.map((t,i) => {
+      const luar = ACUAN[t.levelBloom] && t.levelSOLO && !ACUAN[t.levelBloom].includes(t.levelSOLO);
+      const pre = t.levelSOLO === "Prestructural";
+      return `<tr class="${pre?"ada-masalah":""}"><td><b>${esc(t.kode)}</b></td><td style="min-width:260px">${esc(t.rumusan)}</td>${ed(`tujuanPembelajaran.${i}.kko`, t.kko)}
+      <td>${pilih(`tujuanPembelajaran.${i}.levelBloom`, t.levelBloom, BLOOM, "b-"+t.levelBloom, "Level Bloom "+t.kode)}<span class="catatan-kecil">${esc(NAMA_BLOOM[t.levelBloom]||"")}</span></td>
+      <td>${pilih(`tujuanPembelajaran.${i}.levelSOLO`, t.levelSOLO, SOLO, "s-"+(SLUG_SOLO[t.levelSOLO]||"uni"), "Level SOLO "+t.kode)}${pre?'<span class="catatan-kecil" style="color:var(--merah)">Bukan untuk TP</span>':luar?'<span class="catatan-kecil">Di luar acuan umum; pastikan alasannya jelas</span>':""}</td>
+      ${ed(`tujuanPembelajaran.${i}.alasanLevel`, t.alasanLevel)}</tr>`;
+    }).join("");
+    return kepalaBagian("CE","C–E. Level kognitif Bloom dan kedalaman SOLO") + wrap(`
+      <div class="blok" style="margin:0 0 1rem"><h3>Rentang Bloom yang dipilih</h3>${ed("pemilihanLevelKognitif.rentangBloom",h.pemilihanLevelKognitif.rentangBloom,"div")}
+      <h3 style="margin-top:.7rem">Alasan pemilihan level</h3>${ed("pemilihanLevelKognitif.alasan",h.pemilihanLevelKognitif.alasan,"div")}</div>
+      <div class="tabel-wrap"><table><thead><tr><th>Kode</th><th>Rumusan TP</th><th>KKO</th><th>Bloom</th><th>SOLO</th><th>Alasan level</th></tr></thead><tbody>${rows}</tbody></table></div>
+      <p class="petunjuk" style="margin-top:.8rem">Acuan umum Bloom–SOLO: C1 Unistructural; C2 Uni/Multistructural; C3 Multistructural/Relational; C4 Relational; C5 Relational/Extended Abstract; C6 Extended Abstract. Bloom menentukan proses berpikir, SOLO menentukan kedalaman struktur pemahaman.</p>`);
+  }
+  if(tab === "FG"){
+    const items = h.tujuanPembelajaran.map((t,i) => {
+      const m = masalahTP(t);
+      return `<li class="kartu-tp ${m.length?"ada-masalah":""}">
+        <div class="meta"><span class="kode">${esc(t.kode)}</span><span class="g-chip">${esc(t.gradasi)}</span>${lencanaBloom(t.levelBloom)}${lencanaSolo(t.levelSOLO)}</div>
+        ${ed(`tujuanPembelajaran.${i}.rumusan`, t.rumusan, "div", "rumusan")}
+        <div class="bawah" style="grid-template-columns:1fr"><div><b>Bukti ketercapaian:</b> ${ed(`tujuanPembelajaran.${i}.buktiKetercapaian`, t.buktiKetercapaian, "span")}</div></div>
+        ${m.length?`<div class="masalah">${m.map(esc).join("<br>")}</div>`:""}
+      </li>`;
+    }).join("");
+    return kepalaBagian("FG","F–G. Gradasi dan rumusan tujuan pembelajaran") + wrap(`<p class="petunjuk">Alokasi waktu setiap TP disusun pada tab Alur TP (ATP).</p><ol class="daftar-tp">${items}</ol>`);
+  }
+  if(tab === "ATP"){
+    const rows = arr(h.alurTP).map((a,i) => {
+      const t = h.tujuanPembelajaran.find(x => x.kode === a.kodeTP);
+      return `<tr class="${t?"":"ada-masalah"}"><td><b>${a.urutan}</b></td><td><b>${esc(a.kodeTP)}</b></td>
+        <td style="min-width:280px">${t ? esc(t.rumusan) : '<span class="catatan-kecil" style="color:var(--merah)">TP tidak ditemukan; buat ulang ATP.</span>'}</td>
+        <td>${t ? lencanaBloom(t.levelBloom) + '<div style="height:.3rem"></div>' + lencanaSolo(t.levelSOLO) : "-"}</td>
+        ${ed(`alurTP.${i}.materiPokok`, a.materiPokok)}
+        <td style="text-align:center">${ed(`alurTP.${i}.alokasiJP`, a.alokasiJP, "span", "jp-edit")} JP</td>
+        ${ed(`alurTP.${i}.pertemuanKe`, a.pertemuanKe, "td")}</tr>`;
+    }).join("");
+    return kepalaBagian("ATP","Alur Tujuan Pembelajaran (ATP)") + wrap(`<div id="ringkas-jp">${htmlJP()}</div>
+      <div class="tabel-wrap"><table><thead><tr><th>No</th><th>Kode</th><th>Tujuan pembelajaran</th><th>Bloom / SOLO</th><th>Materi pokok</th><th>Alokasi waktu</th><th>Pertemuan ke-</th></tr></thead><tbody>${rows}
+      <tr><td colspan="5" style="text-align:right"><b>Total alokasi</b></td><td style="text-align:center"><b id="total-atp">${totalJP(h)} JP</b></td><td></td></tr></tbody></table></div>
+      <p class="petunjuk" style="margin-top:.6rem">Rumusan TP, level Bloom, dan SOLO diambil dari hasil analisis pada tab C–E dan F–G; sunting di sana agar tetap selaras.</p>
+      ${blokEdit("Rasional alur dan pembagian waktu","rasionalAlur",h.rasionalAlur || "")}`);
+  }
+  if(tab === "H"){
+    const kartu = h.integrasiKBC.map((k,i) => {
+      const tp = h.tujuanPembelajaran.find(t => t.kode === k.kodeTP);
+      const m = masalahKBC(k);
+      return `<article class="kartu ${m.length?"ada-masalah":""}" style="${m.length?"border-color:var(--kuning-garis)":""}">
+        <h3>${esc(k.kodeTP)}</h3><p class="sub">${esc(tp ? tp.rumusan : "TP tidak ditemukan; buat ulang bagian ini agar selaras.")}</p>
+        <div class="ikon-cinta">${PANCA.map(p => { const pakai = k.nilaiPancaCinta.some(n => p.re.test(n)); return `<span class="${pakai?"pakai":""}" title="${p.nama}"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">${p.svg}</svg>${p.nama.replace("Cinta ","")}<span class="sr">${pakai?" (dipilih)":" (tidak dipilih)"}</span></span>`; }).join("")}</div>
+        <div class="baris"><span class="lbl">Nilai Panca Cinta (pisahkan dengan koma)</span>${ed(`integrasiKBC.${i}.nilaiPancaCinta`, k.nilaiPancaCinta.join(", "), "div")}</div>
+        <div class="baris"><span class="lbl">Rumusan terintegrasi</span>${ed(`integrasiKBC.${i}.rumusan`, k.rumusan, "div")}</div>
+        <div class="baris"><span class="lbl">Perilaku teramati</span>${ed(`integrasiKBC.${i}.perilakuTeramati`, k.perilakuTeramati, "div")}</div>
+        <div class="baris"><span class="lbl">Penerapan dalam kehidupan</span>${ed(`integrasiKBC.${i}.penerapanKehidupan`, k.penerapanKehidupan, "div")}</div>
+        ${m.length?`<div class="masalah">${m.map(esc).join("<br>")}</div>`:""}
+      </article>`;
+    }).join("");
+    return kepalaBagian("H","H. Integrasi Kurikulum Berbasis Cinta") + wrap(kartu ? `<div class="grid-kartu">${kartu}</div>` : `<p class="kosong">Belum ada integrasi KBC. Gunakan tombol buat ulang untuk menyusunnya.</p>`);
+  }
+  if(tab === "I"){
+    const kartu = h.integrasiKeislaman.map((s,i) => `<article class="kartu ${s.tingkatKeyakinan==="rendah"?"rendah":""}">
+      <div class="meta" style="display:flex;gap:.4rem;flex-wrap:wrap;margin-bottom:.4rem"><span class="lencana jenis-int">${esc(s.jenisSumber)}</span><span class="lencana jenis-int">Integrasi ${esc(s.jenisIntegrasi)}</span><span class="lencana yakin-${s.tingkatKeyakinan}">Keyakinan ${esc(s.tingkatKeyakinan)}</span></div>
+      <h3>${ed(`integrasiKeislaman.${i}.rujukan`, s.rujukan, "span")}</h3>
+      ${s.teksArab ? `<div class="arab" lang="ar" dir="rtl" contenteditable="true" data-path="integrasiKeislaman.${i}.teksArab">${esc(s.teksArab)}</div>` : `<p class="arab-kosong">Teks Arab sengaja tidak dicantumkan karena belum dapat dipastikan. Rujuk langsung ke mushaf atau kitab asli.</p>`}
+      <div class="baris"><span class="lbl">Terjemahan atau ringkasan makna</span>${ed(`integrasiKeislaman.${i}.terjemahanAtauMakna`, s.terjemahanAtauMakna, "div")}</div>
+      <div class="baris"><span class="lbl">Keterkaitan dengan materi</span>${ed(`integrasiKeislaman.${i}.keterkaitan`, s.keterkaitan, "div")}</div>
+    </article>`).join("");
+    return kepalaBagian("I","I. Integrasi Al-Qur'an, hadis, dan kitab kuning") + wrap(`
+      <div class="spanduk" role="note">${IKON.awas}<span>Verifikasi teks Arab, nomor ayat, dan terjemahan dengan Qur'an Kemenag (<a href="https://quran.kemenag.go.id" target="_blank" rel="noopener">quran.kemenag.go.id</a>) atau kitab asli sebelum digunakan.</span></div>
+      ${kartu ? `<div class="grid-kartu">${kartu}</div>` : `<p class="kosong">Tidak ditemukan sumber yang benar-benar relevan.</p>`}
+      ${blokEdit("Catatan kejujuran sumber","catatanKejujuranSumber",h.catatanKejujuranSumber)}`);
+  }
+  if(tab === "R"){
+    const r = dataRekap();
+    return kepalaBagian("R","Rekap tujuan pembelajaran", false) + `<div class="tabel-wrap"><table><thead><tr>${r.head.map(x => `<th>${x}</th>`).join("")}</tr></thead><tbody>
+      ${r.rows.map((row,i) => `<tr>${row.map((c,j) => j===2?`<td>${lencanaBloom(c)}</td>`:j===3?`<td>${lencanaSolo(c)}</td>`:`<td>${esc(c)}</td>`).join("")}</tr>`).join("")}
+      <tr><td colspan="6" style="text-align:right"><b>Total JP</b>${S.input.jp?` (alokasi ${esc(S.input.jp)} JP)`:""}</td><td><b>${totalJP(S.hasil)}</b></td></tr>
+    </tbody></table></div>`;
+  }
+  return "";
+}
+function htmlJP(){
+  const tot = totalJP(S.hasil); const jp = Number(S.input.jp);
+  if(!jp) return `<div class="jp-ringkas"><span>Total alokasi ATP: <b>${tot} JP</b></span><span>Alokasi waktu tidak diisi.</span></div>`;
+  const lebih = tot > jp;
+  return `<div class="jp-ringkas ${lebih?"lebih":""}" ${lebih?'role="alert"':""}><span>Total alokasi ATP <b>${tot} JP</b> dari alokasi <b>${jp} JP</b>${S.input.pertemuan?` (${esc(S.input.pertemuan)} pertemuan)`:""}</span><span>${lebih?`Melebihi alokasi sebanyak ${tot-jp} JP. Kurangi jumlah atau bobot TP.`:tot<jp?`Tersisa ${jp-tot} JP untuk asesmen atau remedial.`:"Sesuai alokasi."}</span></div>`;
+}
+function viewLaci(){
+  const list = muatRiwayat();
+  return `<div class="laci-latar" data-act="tutup-laci"></div>
+  <aside class="laci" role="dialog" aria-modal="true" aria-labelledby="judul-laci">
+    <header><h2 id="judul-laci">Riwayat analisis</h2><button class="btn btn-kecil" data-act="tutup-laci">Tutup</button></header>
+    <ul>${list.length ? list.map(x => `<li><div class="j">${esc(x.input.materi)}</div><div class="k">${esc(x.input.mapel||"-")}, ${esc(x.input.jenjang)} Fase ${esc(x.input.fase)} Kelas ${esc(x.input.kelas)}<br>${new Date(x.waktu).toLocaleString("id-ID",{dateStyle:"medium",timeStyle:"short"})}</div>
+      <div class="tombol"><button class="btn btn-kecil" data-act="buka" data-id="${esc(x.id)}">Buka</button><button class="btn btn-kecil" data-act="hapus" data-id="${esc(x.id)}" style="color:var(--merah);border-color:var(--merah)">Hapus</button></div></li>`).join("")
+      : `<li class="kosong">Belum ada analisis tersimpan. Hasil analisis akan tersimpan otomatis di peramban ini.</li>`}</ul>
+  </aside>`;
+}
+
+/* ============ Data ekspor ============ */
+function dataRekap(){
+  const h = S.hasil;
+  return {
+    head:["Kode","Rumusan TP","Bloom","SOLO","Panca Cinta","Bukti ketercapaian","JP"],
+    rows: h.tujuanPembelajaran.map(t => [t.kode, t.rumusan, t.levelBloom, t.levelSOLO, h.integrasiKBC.filter(k => k.kodeTP === t.kode).flatMap(k => k.nilaiPancaCinta).join(", ") || "-", t.buktiKetercapaian, String(jpTP(h, t.kode))])
+  };
+}
+function dataBagian(tab){
+  const h = S.hasil;
+  if(tab === "A") return {judul:"A. Analisis Capaian Pembelajaran", tabel:{head:["CP","Kompetensi","Pengetahuan","Keterampilan","Kompleksitas"], rows:h.analisisCP.tabel.map(r => [r.cp,r.kompetensi,r.pengetahuan,r.keterampilan,r.kompleksitas])}, post:[["Konteks penerapan",h.analisisCP.konteksPenerapan],["Potensi penguatan karakter",h.analisisCP.potensiKarakter]]};
+  if(tab === "B") return {judul:"B. Analisis Materi", tabel:{head:["No","Tahap","Submateri","Deskripsi"], rows:h.analisisMateri.map(m => [String(m.urutan),m.tahap,m.submateri,m.deskripsi])}, post:h.catatanTahapTidakDigunakan?[["Tahap yang tidak digunakan",h.catatanTahapTidakDigunakan]]:[]};
+  if(tab === "CE") return {judul:"C–E. Level Kognitif Bloom dan Kedalaman SOLO", pre:[["Rentang Bloom",h.pemilihanLevelKognitif.rentangBloom],["Alasan pemilihan level",h.pemilihanLevelKognitif.alasan]], tabel:{head:["Kode","KKO","Bloom","SOLO","Alasan level"], rows:h.tujuanPembelajaran.map(t => [t.kode,t.kko,t.levelBloom+" "+(NAMA_BLOOM[t.levelBloom]||""),t.levelSOLO,t.alasanLevel])}};
+  if(tab === "FG") return {judul:"F–G. Gradasi dan Rumusan Tujuan Pembelajaran", tabel:{head:["Kode","Gradasi","Rumusan TP","Bloom","SOLO","Bukti ketercapaian"], rows:h.tujuanPembelajaran.map(t => [t.kode,t.gradasi,t.rumusan,t.levelBloom,t.levelSOLO,t.buktiKetercapaian])}};
+  if(tab === "ATP"){
+    const rows = arr(h.alurTP).map(a => { const t = h.tujuanPembelajaran.find(x => x.kode === a.kodeTP) || {}; return [String(a.urutan), a.kodeTP, t.rumusan || "-", (t.levelBloom||"-") + " / " + (t.levelSOLO||"-"), a.materiPokok, a.alokasiJP + " JP", a.pertemuanKe]; });
+    rows.push(["","","","","Total alokasi", totalJP(h) + " JP", ""]);
+    return {judul:"Alur Tujuan Pembelajaran (ATP)", tabel:{head:["No","Kode","Tujuan pembelajaran","Bloom / SOLO","Materi pokok","Alokasi waktu","Pertemuan ke-"], rows}, post:[["Alokasi waktu yang tersedia", S.input.jp ? S.input.jp + " JP" + (S.input.pertemuan ? ", " + S.input.pertemuan + " pertemuan" : "") : "-"],["Rasional alur", h.rasionalAlur || "-"]]};
+  }
+  if(tab === "H") return {judul:"H. Integrasi Kurikulum Berbasis Cinta", tabel:{head:["Kode TP","Nilai Panca Cinta","Rumusan terintegrasi","Perilaku teramati","Penerapan dalam kehidupan"], rows:h.integrasiKBC.map(k => [k.kodeTP,k.nilaiPancaCinta.join(", "),k.rumusan,k.perilakuTeramati,k.penerapanKehidupan])}};
+  if(tab === "I") return {judul:"I. Integrasi Al-Qur'an, Hadis, dan Kitab Kuning", pre:[["Peringatan","Verifikasi teks Arab, nomor ayat, dan terjemahan dengan Qur'an Kemenag (quran.kemenag.go.id) atau kitab asli sebelum digunakan."]], arabCol:2, tabel:{head:["Jenis","Rujukan","Teks Arab","Terjemahan atau makna","Integrasi","Keterkaitan","Keyakinan"], rows:h.integrasiKeislaman.map(s => [s.jenisSumber,s.rujukan,s.teksArab||"(tidak dicantumkan)",s.terjemahanAtauMakna,s.jenisIntegrasi,s.keterkaitan,s.tingkatKeyakinan])}, post:[["Catatan kejujuran sumber",h.catatanKejujuranSumber]]};
+  if(tab === "R"){ const r = dataRekap(); r.rows.push(["","","","","","Total JP",String(totalJP(h))]); return {judul:"Rekap Tujuan Pembelajaran", tabel:r}; }
+}
+const URUT_EKSPOR = ["A","B","CE","FG","ATP","H","I","R"];
+const ARAB_RE = /[\u0600-\u06FF]/;
+
+/* ============ Salin ============ */
+function salinBagian(tab){
+  const d = dataBagian(tab); if(!d) return;
+  const td = c => ARAB_RE.test(c) ? `<td dir="rtl" style="border:1px solid #9DB3A8;padding:4px 6px;font-family:Amiri,serif;font-size:16pt;text-align:right">${esc(c)}</td>` : `<td style="border:1px solid #9DB3A8;padding:4px 6px;vertical-align:top">${esc(c)}</td>`;
+  const html = `<p><b>${esc(d.judul)}</b></p>${(d.pre||[]).map(([l,t]) => `<p><b>${esc(l)}:</b> ${esc(t)}</p>`).join("")}<table style="border-collapse:collapse;font-family:Calibri,Arial,sans-serif;font-size:10pt"><thead><tr>${d.tabel.head.map(x => `<th style="border:1px solid #9DB3A8;padding:4px 6px;background:#E3EFE8;text-align:left">${esc(x)}</th>`).join("")}</tr></thead><tbody>${d.tabel.rows.map(r => `<tr>${r.map(td).join("")}</tr>`).join("")}</tbody></table>${(d.post||[]).map(([l,t]) => `<p><b>${esc(l)}:</b> ${esc(t)}</p>`).join("")}`;
+  const teks = [d.judul, ...(d.pre||[]).map(([l,t]) => l+": "+t), d.tabel.head.join("\t"), ...d.tabel.rows.map(r => r.map(c => String(c).replace(/\s+/g," ")).join("\t")), ...(d.post||[]).map(([l,t]) => l+": "+t)].join("\n");
+  let ok = false;
+  const div = document.createElement("div");
+  div.style.cssText = "position:fixed;left:-9999px;top:0;background:#fff;color:#000";
+  div.innerHTML = html; document.body.appendChild(div);
+  try{
+    const sel = window.getSelection(); const rg = document.createRange(); rg.selectNodeContents(div);
+    sel.removeAllRanges(); sel.addRange(rg); ok = document.execCommand("copy"); sel.removeAllRanges();
+  }catch(e){ ok = false; }
+  div.remove();
+  if(ok){ tampilToast("Tabel disalin. Tempel ke Word atau dokumen lain."); return; }
+  if(navigator.clipboard && window.ClipboardItem){
+    navigator.clipboard.write([new ClipboardItem({"text/html":new Blob([html],{type:"text/html"}),"text/plain":new Blob([teks],{type:"text/plain"})})])
+      .then(() => tampilToast("Tabel disalin. Tempel ke Word atau dokumen lain."))
+      .catch(() => tampilToast("Penyalinan diblokir peramban. Gunakan ekspor Word sebagai gantinya."));
+  }else tampilToast("Penyalinan tidak didukung di peramban ini. Gunakan ekspor Word.");
+}
+
+/* ============ Ekspor Word ============ */
+function xesc(s){ return String(s ?? "").replace(/[&<>"]/g, c => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c])).replace(/[\u0000-\u0008\u000B\u000C\u000E-\u001F]/g,""); }
+function wRun(t, o={}){
+  const rpr = (o.b?"<w:b/>":"") + (o.color?`<w:color w:val="${o.color}"/>`:"") + (o.sz?`<w:sz w:val="${o.sz}"/><w:szCs w:val="${o.sz}"/>`:"");
+  return String(t ?? "").split("\n").map((l,i) => (i?"<w:r><w:br/></w:r>":"") + `<w:r>${rpr?`<w:rPr>${rpr}</w:rPr>`:""}<w:t xml:space="preserve">${xesc(l)}</w:t></w:r>`).join("");
+}
+function wP(runs, o={}){
+  const ppr = (o.jc?`<w:jc w:val="${o.jc}"/>`:"") + `<w:spacing w:before="${o.before||0}" w:after="${o.after ?? 100}"/>` + (o.garis?'<w:pBdr><w:bottom w:val="double" w:sz="6" w:space="4" w:color="0E5A47"/></w:pBdr>':"");
+  return `<w:p><w:pPr>${o.garis?'<w:pBdr><w:bottom w:val="double" w:sz="6" w:space="4" w:color="0E5A47"/></w:pBdr>':""}<w:spacing w:before="${o.before||0}" w:after="${o.after ?? 100}"/>${o.jc?`<w:jc w:val="${o.jc}"/>`:""}</w:pPr>${runs}</w:p>`;
+}
+function wArab(t, sz=30){ return `<w:p><w:pPr><w:bidi/><w:spacing w:after="40"/></w:pPr><w:r><w:rPr><w:rFonts w:ascii="Amiri" w:hAnsi="Amiri" w:cs="Amiri"/><w:rtl/><w:sz w:val="${sz}"/><w:szCs w:val="${sz}"/></w:rPr><w:t xml:space="preserve">${xesc(t)}</w:t></w:r></w:p>`; }
+function wTabel(head, rows, lebar){
+  const total = 9638;
+  const w = lebar || head.map(() => Math.floor(total/head.length));
+  const borders = ["top","left","bottom","right","insideH","insideV"].map(b => `<w:${b} w:val="single" w:sz="4" w:space="0" w:color="9DB3A8"/>`).join("");
+  const cell = (t, j, h) => `<w:tc><w:tcPr><w:tcW w:w="${w[j]}" w:type="dxa"/>${h?'<w:shd w:val="clear" w:color="auto" w:fill="E3EFE8"/>':""}</w:tcPr>${!h && ARAB_RE.test(t) ? wArab(t, 26) : wP(wRun(t,{b:h,sz:18,color:h?"0E5A47":null}),{after:0})}</w:tc>`;
+  const tr = (r, h) => `<w:tr>${h?"<w:trPr><w:tblHeader/></w:trPr>":""}${r.map((c,j) => cell(c,j,h)).join("")}</w:tr>`;
+  return `<w:tbl><w:tblPr><w:tblW w:w="${total}" w:type="dxa"/><w:tblBorders>${borders}</w:tblBorders><w:tblLayout w:type="fixed"/><w:tblCellMar><w:top w:w="40" w:type="dxa"/><w:left w:w="80" w:type="dxa"/><w:bottom w:w="40" w:type="dxa"/><w:right w:w="80" w:type="dxa"/></w:tblCellMar></w:tblPr><w:tblGrid>${w.map(x => `<w:gridCol w:w="${x}"/>`).join("")}</w:tblGrid>${tr(head,true)}${rows.map(r => tr(r,false)).join("")}</w:tbl>${wP("",{after:160})}`;
+}
+const LEBAR = {
+  A:[1900,1900,1950,1950,1938], B:[600,1600,2600,4838], CE:[900,1600,1300,1700,4138], FG:[800,1300,3400,700,1300,2138], ATP:[500,800,3300,1300,1938,900,900],
+  H:[1000,1600,2600,2400,2038], I:[900,1500,1900,1800,1000,1738,800], R:[800,2900,650,1300,1400,2088,500]
+};
+function barisIdentitas(){
+  const i = S.input;
+  return [["Madrasah", i.madrasah || "-"],["Jenjang", i.jenjang],["Mata pelajaran", i.mapel || "-"],["Fase / Kelas", `Fase ${i.fase} / Kelas ${i.kelas}`],["Semester", i.semester],["Elemen CP", i.elemen || "-"],["Materi pokok", i.materi],["Alokasi waktu", i.jp ? `${i.jp} JP${i.pertemuan?`, ${i.pertemuan} pertemuan`:""}` : "-"]];
+}
+function namaBerkas(ext){ return ("TP " + (S.input.mapel||"") + " " + S.input.materi).replace(/[\\/:*?"<>|]/g,"").replace(/\s+/g,"_").slice(0,80) + "." + ext; }
+async function eksporDocx(){
+  if(!window.JSZip){ tampilToast("Pustaka ekspor Word belum termuat. Muat ulang halaman, lalu coba lagi."); return; }
+  const i = S.input;
+  let body = "";
+  body += wP(wRun("PERUMUSAN TUJUAN PEMBELAJARAN",{b:true,sz:30,color:"0E5A47"}),{jc:"center",after:40});
+  body += wP(wRun((i.madrasah || "Madrasah").toUpperCase(),{b:true,sz:24}),{jc:"center",after:40});
+  body += wP(wRun(`${i.mapel || "Mata pelajaran"}, Fase ${i.fase} Kelas ${i.kelas}, Semester ${i.semester}`,{sz:20}),{jc:"center",after:120,garis:true});
+  body += wP("",{after:80});
+  const idn = barisIdentitas();
+  body += `<w:tbl><w:tblPr><w:tblW w:w="9638" w:type="dxa"/><w:tblLayout w:type="fixed"/></w:tblPr><w:tblGrid><w:gridCol w:w="2400"/><w:gridCol w:w="7238"/></w:tblGrid>${idn.map(([a,b]) => `<w:tr><w:tc><w:tcPr><w:tcW w:w="2400" w:type="dxa"/></w:tcPr>${wP(wRun(a,{b:true,sz:20}),{after:20})}</w:tc><w:tc><w:tcPr><w:tcW w:w="7238" w:type="dxa"/></w:tcPr>${wP(wRun(": " + b,{sz:20}),{after:20})}</w:tc></w:tr>`).join("")}</w:tbl>`;
+  body += wP("",{after:120});
+  body += wP(wRun("Teks CP: ",{b:true,sz:20}) + wRun(i.cp,{sz:20}),{after:200});
+  URUT_EKSPOR.forEach(t => {
+    const d = dataBagian(t);
+    body += wP(wRun(d.judul,{b:true,sz:24,color:"0E5A47"}),{before:200,after:100});
+    (d.pre||[]).forEach(([l,x]) => { body += wP(wRun(l + ": ",{b:true,sz:20}) + wRun(x,{sz:20})); });
+    body += wTabel(d.tabel.head, d.tabel.rows, LEBAR[t]);
+    (d.post||[]).forEach(([l,x]) => { body += wP(wRun(l + ": ",{b:true,sz:20}) + wRun(x,{sz:20})); });
+  });
+  body += wP(wRun("Dokumen ini disusun dengan bantuan AI melalui aplikasi PERTAMA dan telah/perlu ditelaah oleh guru.",{sz:16,color:"50605A"}),{before:240});
+  const docXml = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><w:document xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main" xmlns:r="http://schemas.openxmlformats.org/officeDocument/2006/relationships"><w:body>${body}<w:sectPr><w:pgSz w:w="11906" w:h="16838"/><w:pgMar w:top="1134" w:right="1134" w:bottom="1134" w:left="1134" w:header="708" w:footer="708" w:gutter="0"/></w:sectPr></w:body></w:document>`;
+  const styles = `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><w:styles xmlns:w="http://schemas.openxmlformats.org/wordprocessingml/2006/main"><w:docDefaults><w:rPrDefault><w:rPr><w:rFonts w:ascii="Calibri" w:hAnsi="Calibri" w:eastAsia="Calibri" w:cs="Amiri"/><w:sz w:val="22"/><w:szCs w:val="22"/><w:lang w:val="id-ID" w:bidi="ar-SA"/></w:rPr></w:rPrDefault><w:pPrDefault><w:pPr><w:spacing w:after="100" w:line="264" w:lineRule="auto"/></w:pPr></w:pPrDefault></w:docDefaults><w:style w:type="paragraph" w:default="1" w:styleId="Normal"><w:name w:val="Normal"/></w:style></w:styles>`;
+  const zip = new JSZip();
+  zip.file("[Content_Types].xml", `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Types xmlns="http://schemas.openxmlformats.org/package/2006/content-types"><Default Extension="rels" ContentType="application/vnd.openxmlformats-package.relationships+xml"/><Default Extension="xml" ContentType="application/xml"/><Override PartName="/word/document.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.document.main+xml"/><Override PartName="/word/styles.xml" ContentType="application/vnd.openxmlformats-officedocument.wordprocessingml.styles+xml"/></Types>`);
+  zip.file("_rels/.rels", `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/officeDocument" Target="word/document.xml"/></Relationships>`);
+  zip.file("word/_rels/document.xml.rels", `<?xml version="1.0" encoding="UTF-8" standalone="yes"?><Relationships xmlns="http://schemas.openxmlformats.org/package/2006/relationships"><Relationship Id="rId1" Type="http://schemas.openxmlformats.org/officeDocument/2006/relationships/styles" Target="styles.xml"/></Relationships>`);
+  zip.file("word/document.xml", docXml);
+  zip.file("word/styles.xml", styles);
+  const blob = await zip.generateAsync({type:"blob", mimeType:"application/vnd.openxmlformats-officedocument.wordprocessingml.document"});
+  await unduh(namaBerkas("docx"), blob);
+}
+
+/* ============ Ekspor PDF ============ */
+function bersihPDF(s){
+  return String(s ?? "").replace(/[\u2018\u2019\u02BC]/g,"'").replace(/[\u201C\u201D]/g,'"').replace(/[\u2013\u2014]/g,"-").replace(/\u2192/g,"->").replace(/\u2026/g,"...").replace(/[^\n\r\t\u0020-\u00FF]/g,"");
+}
+async function eksporPDF(){
+  if(!window.jspdf || !window.jspdf.jsPDF){ tampilToast("Pustaka ekspor PDF belum termuat. Muat ulang halaman, lalu coba lagi."); return; }
+  const { jsPDF } = window.jspdf;
+  const doc = new jsPDF({unit:"mm", format:"a4"});
+  if(typeof doc.autoTable !== "function"){ tampilToast("Pustaka tabel PDF belum termuat. Muat ulang halaman, lalu coba lagi."); return; }
+  const W = 210, M = 15, ZAMRUD = [14,90,71];
+  let y = 18;
+  const tulis = (t, o={}) => {
+    doc.setFont("helvetica", o.bold ? "bold" : "normal"); doc.setFontSize(o.size || 10); doc.setTextColor(...(o.color || [29,40,36]));
+    const lines = doc.splitTextToSize(bersihPDF(t), W - 2*M);
+    lines.forEach(l => { if(y > 282){ doc.addPage(); y = 18; } doc.text(l, o.center ? W/2 : M, y, o.center ? {align:"center"} : undefined); y += (o.size || 10) * 0.46; });
+    y += o.gap ?? 1.8;
+  };
+  const i = S.input;
+  tulis("PERUMUSAN TUJUAN PEMBELAJARAN", {bold:true, size:15, color:ZAMRUD, center:true, gap:1});
+  tulis((i.madrasah || "Madrasah").toUpperCase(), {bold:true, size:12, center:true, gap:1});
+  tulis(`${i.mapel || "Mata pelajaran"}, Fase ${i.fase} Kelas ${i.kelas}, Semester ${i.semester}`, {size:10, center:true, gap:1});
+  doc.setDrawColor(...ZAMRUD); doc.setLineWidth(0.8); doc.line(M, y, W-M, y); doc.setLineWidth(0.3); doc.line(M, y+1.2, W-M, y+1.2); y += 5;
+  doc.autoTable({startY:y, theme:"plain", body:barisIdentitas().map(([a,b]) => [bersihPDF(a), ": " + bersihPDF(b)]), styles:{fontSize:9.5, cellPadding:0.8}, columnStyles:{0:{cellWidth:38, fontStyle:"bold"}}, margin:{left:M,right:M}});
+  y = doc.lastAutoTable.finalY + 3;
+  tulis("Teks CP: " + i.cp, {size:9.5, gap:4});
+  URUT_EKSPOR.forEach(t => {
+    const d = dataBagian(t);
+    if(y > 250){ doc.addPage(); y = 18; }
+    tulis(d.judul, {bold:true, size:12, color:ZAMRUD, gap:1.5});
+    (d.pre||[]).forEach(([l,x]) => tulis(l + ": " + x, {size:9.5}));
+    let head = d.tabel.head, rows = d.tabel.rows;
+    if(d.arabCol != null){ head = head.filter((_,j) => j !== d.arabCol); rows = rows.map(r => r.filter((_,j) => j !== d.arabCol)); }
+    doc.autoTable({startY:y, head:[head.map(bersihPDF)], body:rows.map(r => r.map(bersihPDF)), margin:{left:M,right:M}, styles:{fontSize:8.3, cellPadding:1.6, overflow:"linebreak", lineColor:[157,179,168], lineWidth:0.15, textColor:[29,40,36]}, headStyles:{fillColor:[227,239,232], textColor:ZAMRUD, fontStyle:"bold"}, theme:"grid"});
+    y = doc.lastAutoTable.finalY + 4;
+    if(d.arabCol != null) tulis("Teks Arab tidak ditampilkan pada PDF. Lihat aplikasi atau ekspor Word untuk teks Arab.", {size:8.5, color:[80,96,90]});
+    (d.post||[]).forEach(([l,x]) => tulis(l + ": " + x, {size:9.5}));
+    y += 2;
+  });
+  tulis("Dokumen ini disusun dengan bantuan AI melalui aplikasi PERTAMA dan perlu ditelaah oleh guru.", {size:8, color:[80,96,90]});
+  const n = doc.getNumberOfPages();
+  for(let p = 1; p <= n; p++){ doc.setPage(p); doc.setFontSize(8); doc.setTextColor(120,130,125); doc.text(`Halaman ${p} dari ${n}`, W - M, 290, {align:"right"}); }
+  await unduh(namaBerkas("pdf"), doc.output("blob"));
+}
+async function unduh(nama, blob){
+  let dl = null;
+  try{ dl = window.claude && typeof window.claude.use === "function" ? await window.claude.use("downloads") : null; }catch(e){ dl = null; }
+  if(!dl){ tampilToast("Unduhan tidak tersedia di tampilan ini. Buka aplikasi melalui tautan claude.ai Anda."); return; }
+  try{ await dl.save({filename:nama, data:blob}); tampilToast("Berkas diunduh: " + nama); }
+  catch(e){ tampilToast(e && e.code === "declined" ? "Unduhan dibatalkan." : e && e.code === "rate_limited" ? "Tunggu sebentar, lalu coba unduh lagi." : "Unduhan tidak dapat diproses di tampilan ini."); }
+}
+
+/* ============ Form ============ */
+function bacaForm(){
+  const f = $("#form-cp"); if(!f) return S.input;
+  const d = Object.fromEntries(new FormData(f).entries());
+  return Object.assign(kosong(), S.input, d);
+}
+function validasiForm(i){
+  const e = {};
+  if(!i.cp.trim()) e.cp = "Teks CP wajib diisi.";
+  else if(i.cp.trim().length < 20) e.cp = "Teks CP terlalu pendek. Tempel teks CP selengkapnya.";
+  if(!i.materi.trim()) e.materi = "Materi pokok atau topik wajib diisi.";
+  if(i.jp && !(Number(i.jp) > 0)) e.jp = "Jumlah JP harus berupa angka lebih dari 0.";
+  return e;
+}
+
+/* ============ Peristiwa ============ */
+document.addEventListener("click", async ev => {
+  const b = ev.target.closest("[data-act]"); if(!b) return;
+  const act = b.dataset.act;
+  if(act === "contoh"){ S.input = Object.assign(kosong(), CONTOH); S.formErr = {}; simpanDraf(); render(); tampilToast("Form diisi dengan data contoh."); }
+  else if(act === "kirim"){
+    S.input = bacaForm(); simpanDraf();
+    S.formErr = validasiForm(S.input);
+    if(Object.keys(S.formErr).length){ render(); const id = Object.keys(S.formErr)[0]; const el = $("#f-"+id); if(el) el.focus(); return; }
+    S.id = null; S.hasil = null; S.regen = {};
+    jalankan(0);
+  }
+  else if(act === "henti"){ if(S.ctl) S.ctl.abort(); }
+  else if(act === "coba"){ jalankan(S.hasil ? S.resumeFrom : 0); }
+  else if(act === "kembali" || act === "ubah"){ S.view = "form"; S.error = null; S.formErr = {}; render(); }
+  else if(act === "baru"){ if(S.view === "proses" && !S.error) return; S.view = "form"; S.input = kosong(); S.hasil = null; S.id = null; S.formErr = {}; S.error = null; simpanDraf(); render(); }
+  else if(act === "tab"){ S.tab = b.dataset.tab; renderHasilIsi(); const t = $("#tab-"+S.tab); if(t) t.focus({preventScroll:true}); }
+  else if(act === "salin"){ salinBagian(b.dataset.tab); }
+  else if(act === "regen"){ buatUlang(b.dataset.tab); }
+  else if(act === "docx"){ b.disabled = true; try{ await eksporDocx(); }catch(e){ tampilToast("Ekspor Word gagal. Silakan coba lagi."); } b.disabled = false; }
+  else if(act === "pdf"){ b.disabled = true; try{ await eksporPDF(); }catch(e){ tampilToast("Ekspor PDF gagal. Silakan coba lagi."); } b.disabled = false; }
+  else if(act === "laci"){ S.laci = true; render(); const t = $(".laci button"); if(t) t.focus(); }
+  else if(act === "tutup-laci"){ S.laci = false; render(); }
+  else if(act === "buka"){
+    const x = muatRiwayat().find(r => r.id === b.dataset.id); if(!x) return;
+    S.id = x.id; S.input = Object.assign(kosong(), x.input); S.hasil = x.hasil;
+    migrasi(S.hasil, S.input);
+    S.view = "hasil"; S.tab = "A"; S.laci = false; S.error = null; S.regen = {}; render(); window.scrollTo({top:0});
+  }
+  else if(act === "hapus"){
+    const list = muatRiwayat().filter(r => r.id !== b.dataset.id);
+    simpanRiwayat(list);
+    if(S.id === b.dataset.id) S.id = null;
+    render(); tampilToast("Analisis dihapus dari riwayat.");
+  }
+});
+document.addEventListener("keydown", ev => {
+  if(ev.key === "Escape" && S.laci){ S.laci = false; render(); }
+  if(ev.key === "Enter" && ev.target.matches && ev.target.matches('[contenteditable="true"]') && ev.target.tagName === "SPAN" && ev.target.classList.contains("jp-edit")){ ev.preventDefault(); ev.target.blur(); }
+});
+document.addEventListener("input", ev => {
+  if(ev.target.closest && ev.target.closest("#form-cp")){ S.input = bacaForm(); simpanDraf(); }
+});
+document.addEventListener("focusout", ev => {
+  const el = ev.target; if(!el.dataset || !el.dataset.path || el.tagName === "SELECT" || !S.hasil) return;
+  const path = el.dataset.path; let v = el.innerText.replace(/\u00A0/g," ").trim();
+  let nilai = v;
+  if(path.endsWith("alokasiJP")){ nilai = parseInt(v,10) || 0; el.textContent = nilai; }
+  else if(path.endsWith("nilaiPancaCinta")){ nilai = v.split(",").map(s => s.trim()).filter(Boolean); }
+  setPath(S.hasil, path, nilai);
+  persist();
+  const vb = $("#validasi"); if(vb) vb.innerHTML = htmlValidasi(daftarValidasi());
+  const jp = $("#ringkas-jp"); if(jp) jp.innerHTML = htmlJP();
+  const ta = $("#total-atp"); if(ta) ta.textContent = totalJP(S.hasil) + " JP";
+  if(path.endsWith("nilaiPancaCinta")) setTimeout(renderHasilIsi, 0);
+});
+document.addEventListener("change", ev => {
+  const el = ev.target; if(el.tagName !== "SELECT" || !el.dataset.path || !S.hasil) return;
+  setPath(S.hasil, el.dataset.path, el.value); persist(); renderHasilIsi();
+});
+
+render();
+</script>
+</body>
+</html>
